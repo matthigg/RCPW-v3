@@ -3,7 +3,7 @@
   "version": 1,
   "newProjectRoot": "projects",
   "projects": {
-    "rns-v2": {
+    "rcpw-v3": {
       "projectType": "application",
       "schematics": {
         "@schematics/angular:component": {
@@ -17,7 +17,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
           "options": {
-            "outputPath": "dist/rns-v2",
+            "outputPath": "dist/rcpw-v3",
             "index": "src/index.html",
             "main": "src/main.ts",
             "polyfills": "src/polyfills.ts",
@@ -70,18 +70,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "rns-v2:build"
+            "browserTarget": "rcpw-v3:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "rns-v2:build:production"
+              "browserTarget": "rcpw-v3:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "rns-v2:build"
+            "browserTarget": "rcpw-v3:build"
           }
         },
         "test": {
@@ -119,18 +119,18 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "rns-v2:serve"
+            "devServerTarget": "rcpw-v3:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "rns-v2:serve:production"
+              "devServerTarget": "rcpw-v3:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "rns-v2",
+  "defaultProject": "rcpw-v3",
   "cli": {
     "analytics": "aba03337-0409-40d0-a0e1-f938280dce27"
   }
