@@ -1,4 +1,4 @@
-@import '../../shared//colors';
+@import '/src/app/shared/colors';
 
 $mat-card-transition: 0.25s ease-in-out;
 $off-white: rgba(255, 255, 255, 0.87);
@@ -8,7 +8,6 @@ $svg-icon-dimensions: calc(1rem + 0.5vw);
   margin-right: 0.5rem;
   width: $svg-icon-dimensions;
 }
-
 
 .landing-page-spacer {
   height: calc(100vh - 128px);
@@ -61,28 +60,26 @@ mat-toolbar {
     width: 35vw;
   }
   & .mobile-landing-page-text {
-    background-color: rgba(0, 0, 0, 0.87);
+    @include quinary-color-rgba-background(0.8);
     color: #fafafa;
     height: max-content;
     margin-top: calc(56px + 15vh);
     padding-top: 0.5rem;
     width: 100%;
     & h1 {
-      color: #f3d333;
-      font-family: 'Stencil';
+      color: #fafafa;
       margin: 0;
       text-align: center;
     }
     & h2 {
       color: #fafafa;
       font-size: 1rem;
-      margin: 0;
       text-align: center;
     }
     & p {
       padding-left: 1rem;
     }
-    ::ng-deep li {
+    & ::ng-deep li {
       color: $off-white;
       & .svg-email {
         fill: $off-white !important;
@@ -108,4 +105,9 @@ mat-toolbar {
 .section-services {
   background-color: #fafafa;
   padding: 1rem;
+}
+
+.service-mobile-view {
+  margin-left: 1rem;
+  padding-bottom: 0.25rem;
 }

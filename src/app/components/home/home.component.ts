@@ -17,7 +17,9 @@ import { WindowSize } from '../../shared/models/window-size';
   ]
 })
 export class HomeComponent implements OnDestroy, OnInit {
+  businessName = this.businessInformationService.businessName;
   city: string = this.businessInformationService.city;
+  services: string[] = this.businessInformationService.services;
   state: string = this.businessInformationService.state;
   phoneNumber: string = this.businessInformationService.phoneNumber;
   windowSize: WindowSize | null = null;
@@ -36,5 +38,6 @@ export class HomeComponent implements OnDestroy, OnInit {
     this.subscriptions.add(this.windowSizeService.windowSize.subscribe(
       response => this.windowSize = response
     ));
+    console.log('--- x:', this.businessInformationService)
   }
 }

@@ -7,22 +7,18 @@
   </app-contact-form-stepper>
 
   <div class="mobile-landing-page-text" *ngIf="windowSize.width < 768">
-    <h1>RESTORE & SHINE</h1>
+    <h1>{{ businessName }}</h1>
     <h2>Pressure Washing</h2>
-    <p>
-      &nbsp;•&nbsp; Soft Wash <br>
-      &nbsp;•&nbsp; Concrete Cleaning <br>
-      &nbsp;•&nbsp; Outdoor Stain Removal <br> 
-      &nbsp;•&nbsp; Deck Cleaning & Restoration <br>
-      &nbsp;•&nbsp; Fence Cleaning <br>
-    </p>
+    <div class="service-mobile-view" *ngFor="let service of services">
+      &nbsp;•&nbsp; {{ service }}
+    </div>
     <app-contact-info></app-contact-info>
   </div>
 </section>
 
 <!-- Landing Page Footer Toolbar -->
 <mat-toolbar>
-  <span>Pressure Washing Services in {{ city }} {{ state }}</span>
+  <span> Pressure Washing Services in {{ city }} {{ state }}</span>
   <span class="italic" *ngIf="windowSize.width > 1340px">
     Soft Wash 
     &nbsp;•&nbsp; Concrete Cleaning 
