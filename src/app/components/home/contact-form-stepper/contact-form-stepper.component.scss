@@ -1,19 +1,20 @@
-@import '../../../shared/colors';
+@import '/src/app/shared/colors';
 
 #contact-form-stepper-wrapper {
-  background-color: $quinary-color;
+  background-color: #fff;
+  border: 1px solid $quinary-color;
   border-radius: 0.35rem;
-  color: #fff;
+  color: $quinary-color;
   margin: none;
   padding-top: 1rem;
-  // text-align: center;
   & #contact-form-stepper-header {
+    font-weight: 600;
     text-align: center;
   }
   & mat-horizontal-stepper {
-    background-color: $quinary-color;
-    border-radius: 0.35rem;
-    color: #fff;
+    background-color: #fff;
+    border-radius: 0 0 0.35rem 0.35rem;
+    color: $quinary-color;
     font-size: 0.85rem;
     padding: 0.5rem 0.5rem 0 0.5rem;
     & .button-wrapper-step-1 {

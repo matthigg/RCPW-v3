@@ -1,27 +1,41 @@
 @use '~@angular/material' as mat;
 @import '~@angular/material/theming';
+@import '/src/app/shared/colors';
 @include mat.core();
 
 // https://blog.thoughtram.io/angular/2017/05/23/custom-themes-with-angular-material.html
-$mat-custom-yellow: (
-  100: #f3d333,
-  500: #f3d333,
-  700: #f3d333,
+// $mat-custom-yellow: (
+//   100: #f3d333,
+//   500: #f3d333,
+//   700: #f3d333,
+//   contrast: (
+//     // 100: $black-87-opacity,
+//     100: white,
+//     500: white,
+//     700: white,
+//   )
+// );
+
+$mat-custom-light-blue: (
+  100: $tertiary-color,
+  500: $tertiary-color,
+  700: $tertiary-color,
   contrast: (
-    100: $black-87-opacity,
+    // 100: $black-87-opacity,
+    100: white,
     500: white,
     700: white,
   )
 );
 
 $theme-primary: mat.define-palette(mat.$blue-palette, 800, 100, 700);
-$theme-accent: mat.define-palette($mat-custom-yellow, 500, 100, 700);
+$theme-accent: mat.define-palette($mat-custom-light-blue, 500, 100, 700);
 $theme-warn: mat.define-palette(mat.$red-palette, 500, 100, 700);
 $theme: mat.define-light-theme($theme-primary, $theme-accent, $theme-warn);
 @include mat.all-component-themes($theme);
 
 $dark-theme-primary: mat.define-palette(mat.$amber-palette, 500, 100, 700);
-$dark-theme-accent: mat.define-palette($mat-custom-yellow, 500, 100, 700);
+$dark-theme-accent: mat.define-palette($mat-custom-light-blue, 500, 100, 700);
 $dark-theme-warn: mat.define-palette(mat.$deep-orange-palette, 500, 100, 700);
 $dark-theme: mat.define-dark-theme($dark-theme-primary, $dark-theme-accent, $dark-theme-warn);
 .dark-theme {

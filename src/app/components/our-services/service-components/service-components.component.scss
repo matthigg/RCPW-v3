@@ -1,3 +1,5 @@
+@import 'src/app/shared/colors';
+
 $mat-card-transition: 0.25s ease-in-out;
 $deck-cleaning-and-restoration-140kb: 'img/deck-cleaning-and-restoration-01/140kb';
 $fence-cleaning-140kb: 'img/fence-cleaning-01/140kb';
@@ -8,97 +10,97 @@ $s3-bucket: 'https://rns-static-and-media-files.s3.amazonaws.com/static';
 
 // Fence Cleaning
 .card-background-fence-cleaning.show-image {
-  @media (min-width: 0px) {
-    background-image:                   url('#{$s3-bucket}/#{$fence-cleaning-140kb}/1x-fence-cleaning-01-320.jpg');
-    background-image: -webkit-image-set(url('#{$s3-bucket}/#{$fence-cleaning-140kb}/1x-fence-cleaning-01-320.webp') 1x, url('#{$s3-bucket}/#{$fence-cleaning-140kb}/2x-fence-cleaning-01-320.webp') 2x);  
-    background-image:         image-set(url('#{$s3-bucket}/#{$fence-cleaning-140kb}/1x-fence-cleaning-01-320.jpg') 1x, url('#{$s3-bucket}/#{$fence-cleaning-140kb}/2x-fence-cleaning-01-320.jpg') 2x);
-  }
-  @media (min-width: 576px) {
-    background-image:                   url('#{$s3-bucket}/#{$fence-cleaning-140kb}/1x-fence-cleaning-01-576.jpg');
-    background-image: -webkit-image-set(url('#{$s3-bucket}/#{$fence-cleaning-140kb}/1x-fence-cleaning-01-576.webp') 1x, url('#{$s3-bucket}/#{$fence-cleaning-140kb}/2x-fence-cleaning-01-576.webp') 2x);  
-    background-image:         image-set(url('#{$s3-bucket}/#{$fence-cleaning-140kb}/1x-fence-cleaning-01-576.jpg') 1x, url('#{$s3-bucket}/#{$fence-cleaning-140kb}/2x-fence-cleaning-01-576.jpg') 2x);
-  }
-  @media (min-width: 768px) {
-    background-image:                   url('#{$s3-bucket}/#{$fence-cleaning-140kb}/1x-fence-cleaning-01-768.jpg');
-    background-image: -webkit-image-set(url('#{$s3-bucket}/#{$fence-cleaning-140kb}/1x-fence-cleaning-01-768.webp') 1x, url('#{$s3-bucket}/#{$fence-cleaning-140kb}/2x-fence-cleaning-01-768.webp') 2x);  
-    background-image:         image-set(url('#{$s3-bucket}/#{$fence-cleaning-140kb}/1x-fence-cleaning-01-768.jpg') 1x, url('#{$s3-bucket}/#{$fence-cleaning-140kb}/2x-fence-cleaning-01-768.jpg') 2x);
-  }
+  // @media (min-width: 0px) {
+  //   background-image:                   url('#{$s3-bucket}/#{$fence-cleaning-140kb}/1x-fence-cleaning-01-320.jpg');
+  //   background-image: -webkit-image-set(url('#{$s3-bucket}/#{$fence-cleaning-140kb}/1x-fence-cleaning-01-320.webp') 1x, url('#{$s3-bucket}/#{$fence-cleaning-140kb}/2x-fence-cleaning-01-320.webp') 2x);  
+  //   background-image:         image-set(url('#{$s3-bucket}/#{$fence-cleaning-140kb}/1x-fence-cleaning-01-320.jpg') 1x, url('#{$s3-bucket}/#{$fence-cleaning-140kb}/2x-fence-cleaning-01-320.jpg') 2x);
+  // }
+  // @media (min-width: 576px) {
+  //   background-image:                   url('#{$s3-bucket}/#{$fence-cleaning-140kb}/1x-fence-cleaning-01-576.jpg');
+  //   background-image: -webkit-image-set(url('#{$s3-bucket}/#{$fence-cleaning-140kb}/1x-fence-cleaning-01-576.webp') 1x, url('#{$s3-bucket}/#{$fence-cleaning-140kb}/2x-fence-cleaning-01-576.webp') 2x);  
+  //   background-image:         image-set(url('#{$s3-bucket}/#{$fence-cleaning-140kb}/1x-fence-cleaning-01-576.jpg') 1x, url('#{$s3-bucket}/#{$fence-cleaning-140kb}/2x-fence-cleaning-01-576.jpg') 2x);
+  // }
+  // @media (min-width: 768px) {
+  //   background-image:                   url('#{$s3-bucket}/#{$fence-cleaning-140kb}/1x-fence-cleaning-01-768.jpg');
+  //   background-image: -webkit-image-set(url('#{$s3-bucket}/#{$fence-cleaning-140kb}/1x-fence-cleaning-01-768.webp') 1x, url('#{$s3-bucket}/#{$fence-cleaning-140kb}/2x-fence-cleaning-01-768.webp') 2x);  
+  //   background-image:         image-set(url('#{$s3-bucket}/#{$fence-cleaning-140kb}/1x-fence-cleaning-01-768.jpg') 1x, url('#{$s3-bucket}/#{$fence-cleaning-140kb}/2x-fence-cleaning-01-768.jpg') 2x);
+  // }
 }
 
 // Surface Cleaning
 .card-background-concrete-cleaning.show-image {
-  @media (min-width: 0px) {
-    background-image:                   url('#{$s3-bucket}/#{$surface-cleaning-140kb}/1x-surface-cleaning-01-320.jpg');
-    background-image: -webkit-image-set(url('#{$s3-bucket}/#{$surface-cleaning-140kb}/1x-surface-cleaning-01-320.webp') 1x, url('#{$s3-bucket}/#{$surface-cleaning-140kb}/2x-surface-cleaning-01-320.webp') 2x);  
-    background-image:         image-set(url('#{$s3-bucket}/#{$surface-cleaning-140kb}/1x-surface-cleaning-01-320.jpg') 1x, url('#{$s3-bucket}/#{$surface-cleaning-140kb}/2x-surface-cleaning-01-320.jpg') 2x);
-  }
-  @media (min-width: 576px) {
-    background-image:                   url('#{$s3-bucket}/#{$surface-cleaning-140kb}/1x-surface-cleaning-01-576.jpg');
-    background-image: -webkit-image-set(url('#{$s3-bucket}/#{$surface-cleaning-140kb}/1x-surface-cleaning-01-576.webp') 1x, url('#{$s3-bucket}/#{$surface-cleaning-140kb}/2x-surface-cleaning-01-576.webp') 2x);  
-    background-image:         image-set(url('#{$s3-bucket}/#{$surface-cleaning-140kb}/1x-surface-cleaning-01-576.jpg') 1x, url('#{$s3-bucket}/#{$surface-cleaning-140kb}/2x-surface-cleaning-01-576.jpg') 2x);
-  }
-  @media (min-width: 768px) {
-    background-image:                   url('#{$s3-bucket}/#{$surface-cleaning-140kb}/1x-surface-cleaning-01-768.jpg');
-    background-image: -webkit-image-set(url('#{$s3-bucket}/#{$surface-cleaning-140kb}/1x-surface-cleaning-01-768.webp') 1x, url('#{$s3-bucket}/#{$surface-cleaning-140kb}/2x-surface-cleaning-01-768.webp') 2x);  
-    background-image:         image-set(url('#{$s3-bucket}/#{$surface-cleaning-140kb}/1x-surface-cleaning-01-768.jpg') 1x, url('#{$s3-bucket}/#{$surface-cleaning-140kb}/2x-surface-cleaning-01-768.jpg') 2x);
-  }
+  // @media (min-width: 0px) {
+  //   background-image:                   url('#{$s3-bucket}/#{$surface-cleaning-140kb}/1x-surface-cleaning-01-320.jpg');
+  //   background-image: -webkit-image-set(url('#{$s3-bucket}/#{$surface-cleaning-140kb}/1x-surface-cleaning-01-320.webp') 1x, url('#{$s3-bucket}/#{$surface-cleaning-140kb}/2x-surface-cleaning-01-320.webp') 2x);  
+  //   background-image:         image-set(url('#{$s3-bucket}/#{$surface-cleaning-140kb}/1x-surface-cleaning-01-320.jpg') 1x, url('#{$s3-bucket}/#{$surface-cleaning-140kb}/2x-surface-cleaning-01-320.jpg') 2x);
+  // }
+  // @media (min-width: 576px) {
+  //   background-image:                   url('#{$s3-bucket}/#{$surface-cleaning-140kb}/1x-surface-cleaning-01-576.jpg');
+  //   background-image: -webkit-image-set(url('#{$s3-bucket}/#{$surface-cleaning-140kb}/1x-surface-cleaning-01-576.webp') 1x, url('#{$s3-bucket}/#{$surface-cleaning-140kb}/2x-surface-cleaning-01-576.webp') 2x);  
+  //   background-image:         image-set(url('#{$s3-bucket}/#{$surface-cleaning-140kb}/1x-surface-cleaning-01-576.jpg') 1x, url('#{$s3-bucket}/#{$surface-cleaning-140kb}/2x-surface-cleaning-01-576.jpg') 2x);
+  // }
+  // @media (min-width: 768px) {
+  //   background-image:                   url('#{$s3-bucket}/#{$surface-cleaning-140kb}/1x-surface-cleaning-01-768.jpg');
+  //   background-image: -webkit-image-set(url('#{$s3-bucket}/#{$surface-cleaning-140kb}/1x-surface-cleaning-01-768.webp') 1x, url('#{$s3-bucket}/#{$surface-cleaning-140kb}/2x-surface-cleaning-01-768.webp') 2x);  
+  //   background-image:         image-set(url('#{$s3-bucket}/#{$surface-cleaning-140kb}/1x-surface-cleaning-01-768.jpg') 1x, url('#{$s3-bucket}/#{$surface-cleaning-140kb}/2x-surface-cleaning-01-768.jpg') 2x);
+  // }
 }
 
 // Soft Wash
 .card-background-soft-wash.show-image {
-  @media (min-width: 0px) {
-    background-image:                   url('#{$s3-bucket}/#{$soft-wash-140kb}/1x-soft-wash-01-320.jpg');
-    background-image: -webkit-image-set(url('#{$s3-bucket}/#{$soft-wash-140kb}/1x-soft-wash-01-320.webp') 1x, url('#{$s3-bucket}/#{$soft-wash-140kb}/2x-soft-wash-01-320.webp') 2x);  
-    background-image:         image-set(url('#{$s3-bucket}/#{$soft-wash-140kb}/1x-soft-wash-01-320.jpg') 1x, url('#{$s3-bucket}/#{$soft-wash-140kb}/2x-soft-wash-01-320.jpg') 2x);
-  }
-  @media (min-width: 576px) {
-    background-image:                   url('#{$s3-bucket}/#{$soft-wash-140kb}/1x-soft-wash-01-576.jpg');
-    background-image: -webkit-image-set(url('#{$s3-bucket}/#{$soft-wash-140kb}/1x-soft-wash-01-576.webp') 1x, url('#{$s3-bucket}/#{$soft-wash-140kb}/2x-soft-wash-01-576.webp') 2x);  
-    background-image:         image-set(url('#{$s3-bucket}/#{$soft-wash-140kb}/1x-soft-wash-01-576.jpg') 1x, url('#{$s3-bucket}/#{$soft-wash-140kb}/2x-soft-wash-01-576.jpg') 2x);
-  }
-  @media (min-width: 768px) {
-    background-image:                   url('#{$s3-bucket}/#{$soft-wash-140kb}/1x-soft-wash-01-768.jpg');
-    background-image: -webkit-image-set(url('#{$s3-bucket}/#{$soft-wash-140kb}/1x-soft-wash-01-768.webp') 1x, url('#{$s3-bucket}/#{$soft-wash-140kb}/2x-soft-wash-01-768.webp') 2x);  
-    background-image:         image-set(url('#{$s3-bucket}/#{$soft-wash-140kb}/1x-soft-wash-01-768.jpg') 1x, url('#{$s3-bucket}/#{$soft-wash-140kb}/2x-soft-wash-01-768.jpg') 2x);
-  }
+  // @media (min-width: 0px) {
+  //   background-image:                   url('#{$s3-bucket}/#{$soft-wash-140kb}/1x-soft-wash-01-320.jpg');
+  //   background-image: -webkit-image-set(url('#{$s3-bucket}/#{$soft-wash-140kb}/1x-soft-wash-01-320.webp') 1x, url('#{$s3-bucket}/#{$soft-wash-140kb}/2x-soft-wash-01-320.webp') 2x);  
+  //   background-image:         image-set(url('#{$s3-bucket}/#{$soft-wash-140kb}/1x-soft-wash-01-320.jpg') 1x, url('#{$s3-bucket}/#{$soft-wash-140kb}/2x-soft-wash-01-320.jpg') 2x);
+  // }
+  // @media (min-width: 576px) {
+  //   background-image:                   url('#{$s3-bucket}/#{$soft-wash-140kb}/1x-soft-wash-01-576.jpg');
+  //   background-image: -webkit-image-set(url('#{$s3-bucket}/#{$soft-wash-140kb}/1x-soft-wash-01-576.webp') 1x, url('#{$s3-bucket}/#{$soft-wash-140kb}/2x-soft-wash-01-576.webp') 2x);  
+  //   background-image:         image-set(url('#{$s3-bucket}/#{$soft-wash-140kb}/1x-soft-wash-01-576.jpg') 1x, url('#{$s3-bucket}/#{$soft-wash-140kb}/2x-soft-wash-01-576.jpg') 2x);
+  // }
+  // @media (min-width: 768px) {
+  //   background-image:                   url('#{$s3-bucket}/#{$soft-wash-140kb}/1x-soft-wash-01-768.jpg');
+  //   background-image: -webkit-image-set(url('#{$s3-bucket}/#{$soft-wash-140kb}/1x-soft-wash-01-768.webp') 1x, url('#{$s3-bucket}/#{$soft-wash-140kb}/2x-soft-wash-01-768.webp') 2x);  
+  //   background-image:         image-set(url('#{$s3-bucket}/#{$soft-wash-140kb}/1x-soft-wash-01-768.jpg') 1x, url('#{$s3-bucket}/#{$soft-wash-140kb}/2x-soft-wash-01-768.jpg') 2x);
+  // }
 }
 
 // Outdoor Stain Removal
 .card-background-outdoor-stain-removal.show-image {
-  @media (min-width: 0px) {
-    background-image:                   url('#{$s3-bucket}/#{$outdoor-stain-removal-140kb}/1x-outdoor-stain-removal-01-320.jpg');
-    background-image: -webkit-image-set(url('#{$s3-bucket}/#{$outdoor-stain-removal-140kb}/1x-outdoor-stain-removal-01-320.webp') 1x, url('#{$s3-bucket}/#{$outdoor-stain-removal-140kb}/2x-outdoor-stain-removal-01-320.webp') 2x);  
-    background-image:         image-set(url('#{$s3-bucket}/#{$outdoor-stain-removal-140kb}/1x-outdoor-stain-removal-01-320.jpg') 1x, url('#{$s3-bucket}/#{$outdoor-stain-removal-140kb}/2x-outdoor-stain-removal-01-320.jpg') 2x);
-  }
-  @media (min-width: 576px) {
-    background-image:                   url('#{$s3-bucket}/#{$outdoor-stain-removal-140kb}/1x-outdoor-stain-removal-01-576.jpg');
-    background-image: -webkit-image-set(url('#{$s3-bucket}/#{$outdoor-stain-removal-140kb}/1x-outdoor-stain-removal-01-576.webp') 1x, url('#{$s3-bucket}/#{$outdoor-stain-removal-140kb}/2x-outdoor-stain-removal-01-576.webp') 2x);  
-    background-image:         image-set(url('#{$s3-bucket}/#{$outdoor-stain-removal-140kb}/1x-outdoor-stain-removal-01-576.jpg') 1x, url('#{$s3-bucket}/#{$outdoor-stain-removal-140kb}/2x-outdoor-stain-removal-01-576.jpg') 2x);
-  }
-  @media (min-width: 768px) {
-    background-image:                   url('#{$s3-bucket}/#{$outdoor-stain-removal-140kb}/1x-outdoor-stain-removal-01-768.jpg');
-    background-image: -webkit-image-set(url('#{$s3-bucket}/#{$outdoor-stain-removal-140kb}/1x-outdoor-stain-removal-01-768.webp') 1x, url('#{$s3-bucket}/#{$outdoor-stain-removal-140kb}/2x-outdoor-stain-removal-01-768.webp') 2x);  
-    background-image:         image-set(url('#{$s3-bucket}/#{$outdoor-stain-removal-140kb}/1x-outdoor-stain-removal-01-768.jpg') 1x, url('#{$s3-bucket}/#{$outdoor-stain-removal-140kb}/2x-outdoor-stain-removal-01-768.jpg') 2x);
-  }
+  // @media (min-width: 0px) {
+  //   background-image:                   url('#{$s3-bucket}/#{$outdoor-stain-removal-140kb}/1x-outdoor-stain-removal-01-320.jpg');
+  //   background-image: -webkit-image-set(url('#{$s3-bucket}/#{$outdoor-stain-removal-140kb}/1x-outdoor-stain-removal-01-320.webp') 1x, url('#{$s3-bucket}/#{$outdoor-stain-removal-140kb}/2x-outdoor-stain-removal-01-320.webp') 2x);  
+  //   background-image:         image-set(url('#{$s3-bucket}/#{$outdoor-stain-removal-140kb}/1x-outdoor-stain-removal-01-320.jpg') 1x, url('#{$s3-bucket}/#{$outdoor-stain-removal-140kb}/2x-outdoor-stain-removal-01-320.jpg') 2x);
+  // }
+  // @media (min-width: 576px) {
+  //   background-image:                   url('#{$s3-bucket}/#{$outdoor-stain-removal-140kb}/1x-outdoor-stain-removal-01-576.jpg');
+  //   background-image: -webkit-image-set(url('#{$s3-bucket}/#{$outdoor-stain-removal-140kb}/1x-outdoor-stain-removal-01-576.webp') 1x, url('#{$s3-bucket}/#{$outdoor-stain-removal-140kb}/2x-outdoor-stain-removal-01-576.webp') 2x);  
+  //   background-image:         image-set(url('#{$s3-bucket}/#{$outdoor-stain-removal-140kb}/1x-outdoor-stain-removal-01-576.jpg') 1x, url('#{$s3-bucket}/#{$outdoor-stain-removal-140kb}/2x-outdoor-stain-removal-01-576.jpg') 2x);
+  // }
+  // @media (min-width: 768px) {
+  //   background-image:                   url('#{$s3-bucket}/#{$outdoor-stain-removal-140kb}/1x-outdoor-stain-removal-01-768.jpg');
+  //   background-image: -webkit-image-set(url('#{$s3-bucket}/#{$outdoor-stain-removal-140kb}/1x-outdoor-stain-removal-01-768.webp') 1x, url('#{$s3-bucket}/#{$outdoor-stain-removal-140kb}/2x-outdoor-stain-removal-01-768.webp') 2x);  
+  //   background-image:         image-set(url('#{$s3-bucket}/#{$outdoor-stain-removal-140kb}/1x-outdoor-stain-removal-01-768.jpg') 1x, url('#{$s3-bucket}/#{$outdoor-stain-removal-140kb}/2x-outdoor-stain-removal-01-768.jpg') 2x);
+  // }
 }
 
 // Deck Cleaning & Restoration
 .card-background-deck-cleaning-and-restoration.show-image {
-  @media (min-width: 0px) {
-    background-image:                   url('#{$s3-bucket}/#{$deck-cleaning-and-restoration-140kb}/1x-deck-cleaning-and-restoration-01-320.jpg');
-    background-image: -webkit-image-set(url('#{$s3-bucket}/#{$deck-cleaning-and-restoration-140kb}/1x-deck-cleaning-and-restoration-01-320.webp') 1x, url('#{$s3-bucket}/#{$deck-cleaning-and-restoration-140kb}/2x-deck-cleaning-and-restoration-01-320.webp') 2x);  
-    background-image:         image-set(url('#{$s3-bucket}/#{$deck-cleaning-and-restoration-140kb}/1x-deck-cleaning-and-restoration-01-320.jpg') 1x, url('#{$s3-bucket}/#{$deck-cleaning-and-restoration-140kb}/2x-deck-cleaning-and-restoration-01-320.jpg') 2x);
-  }
-  @media (min-width: 576px) {
-    background-image:                   url('#{$s3-bucket}/#{$deck-cleaning-and-restoration-140kb}/1x-deck-cleaning-and-restoration-01-576.jpg');
-    background-image: -webkit-image-set(url('#{$s3-bucket}/#{$deck-cleaning-and-restoration-140kb}/1x-deck-cleaning-and-restoration-01-576.webp') 1x, url('#{$s3-bucket}/#{$deck-cleaning-and-restoration-140kb}/2x-deck-cleaning-and-restoration-01-576.webp') 2x);  
-    background-image:         image-set(url('#{$s3-bucket}/#{$deck-cleaning-and-restoration-140kb}/1x-deck-cleaning-and-restoration-01-576.jpg') 1x, url('#{$s3-bucket}/#{$deck-cleaning-and-restoration-140kb}/2x-deck-cleaning-and-restoration-01-576.jpg') 2x);
-  }
-  @media (min-width: 768px) {
-    background-image:                   url('#{$s3-bucket}/#{$deck-cleaning-and-restoration-140kb}/1x-deck-cleaning-and-restoration-01-768.jpg');
-    background-image: -webkit-image-set(url('#{$s3-bucket}/#{$deck-cleaning-and-restoration-140kb}/1x-deck-cleaning-and-restoration-01-768.webp') 1x, url('#{$s3-bucket}/#{$deck-cleaning-and-restoration-140kb}/2x-deck-cleaning-and-restoration-01-768.webp') 2x);  
-    background-image:         image-set(url('#{$s3-bucket}/#{$deck-cleaning-and-restoration-140kb}/1x-deck-cleaning-and-restoration-01-768.jpg') 1x, url('#{$s3-bucket}/#{$deck-cleaning-and-restoration-140kb}/2x-deck-cleaning-and-restoration-01-768.jpg') 2x);
-  }
+  // @media (min-width: 0px) {
+  //   background-image:                   url('#{$s3-bucket}/#{$deck-cleaning-and-restoration-140kb}/1x-deck-cleaning-and-restoration-01-320.jpg');
+  //   background-image: -webkit-image-set(url('#{$s3-bucket}/#{$deck-cleaning-and-restoration-140kb}/1x-deck-cleaning-and-restoration-01-320.webp') 1x, url('#{$s3-bucket}/#{$deck-cleaning-and-restoration-140kb}/2x-deck-cleaning-and-restoration-01-320.webp') 2x);  
+  //   background-image:         image-set(url('#{$s3-bucket}/#{$deck-cleaning-and-restoration-140kb}/1x-deck-cleaning-and-restoration-01-320.jpg') 1x, url('#{$s3-bucket}/#{$deck-cleaning-and-restoration-140kb}/2x-deck-cleaning-and-restoration-01-320.jpg') 2x);
+  // }
+  // @media (min-width: 576px) {
+  //   background-image:                   url('#{$s3-bucket}/#{$deck-cleaning-and-restoration-140kb}/1x-deck-cleaning-and-restoration-01-576.jpg');
+  //   background-image: -webkit-image-set(url('#{$s3-bucket}/#{$deck-cleaning-and-restoration-140kb}/1x-deck-cleaning-and-restoration-01-576.webp') 1x, url('#{$s3-bucket}/#{$deck-cleaning-and-restoration-140kb}/2x-deck-cleaning-and-restoration-01-576.webp') 2x);  
+  //   background-image:         image-set(url('#{$s3-bucket}/#{$deck-cleaning-and-restoration-140kb}/1x-deck-cleaning-and-restoration-01-576.jpg') 1x, url('#{$s3-bucket}/#{$deck-cleaning-and-restoration-140kb}/2x-deck-cleaning-and-restoration-01-576.jpg') 2x);
+  // }
+  // @media (min-width: 768px) {
+  //   background-image:                   url('#{$s3-bucket}/#{$deck-cleaning-and-restoration-140kb}/1x-deck-cleaning-and-restoration-01-768.jpg');
+  //   background-image: -webkit-image-set(url('#{$s3-bucket}/#{$deck-cleaning-and-restoration-140kb}/1x-deck-cleaning-and-restoration-01-768.webp') 1x, url('#{$s3-bucket}/#{$deck-cleaning-and-restoration-140kb}/2x-deck-cleaning-and-restoration-01-768.webp') 2x);  
+  //   background-image:         image-set(url('#{$s3-bucket}/#{$deck-cleaning-and-restoration-140kb}/1x-deck-cleaning-and-restoration-01-768.jpg') 1x, url('#{$s3-bucket}/#{$deck-cleaning-and-restoration-140kb}/2x-deck-cleaning-and-restoration-01-768.jpg') 2x);
+  // }
 }
 
 mat-card {
@@ -143,11 +145,11 @@ mat-card {
   &:hover {
     cursor: pointer;
     & mat-card-actions {
-      color: #f3d333;
+      color: $tertiary-color;
       transition: $mat-card-transition;
       & .learn-more-wrapper .svg-right-arrow {
         left: 0.5rem;
-        stroke: #f3d333;
+        stroke: $tertiary-color;
         transition: $mat-card-transition;
       }
     }
