@@ -1,3 +1,5 @@
+@import '/src/app/shared/colors';
+
 .grid-form-info-text-wrapper {
   display: grid;
   grid-gap: 0;
@@ -29,6 +31,7 @@
     }
   }
   & .contact-text {
+    color: $quinary-color;
     font-size: 1.25rem;
     grid-area: text;
     padding-right: 2rem;
@@ -38,7 +41,7 @@
         font-size: 1.40rem;
         font-weight: 500;
         & span {
-          color: #f3d333;
+          color: $tertiary-color;
           font-style: italic;
         }
       }

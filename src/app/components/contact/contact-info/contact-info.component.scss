@@ -1,3 +1,6 @@
+@import '/src/app/shared/colors';
+
+$svg-icon-color: $quinary-color;
 $svg-icon-dimensions: calc(1rem + 0.5vw);
 $svg-icon-tint: rgba(0, 0, 0, 0.87);
 %svg-icon-attributes {
@@ -7,6 +10,7 @@ $svg-icon-tint: rgba(0, 0, 0, 0.87);
 }
 
 ul {
+  color: $quinary-color;
   list-style-type: none;
   padding: 0 1rem;
   & li {
@@ -14,20 +18,20 @@ ul {
     display: flex;
     margin: calc(0.5rem + 0.5vw) 0;
     & .svg-email {
-      fill: $svg-icon-tint;
+      fill: $svg-icon-color;
       @extend %svg-icon-attributes;
     }
     & .svg-hours-of-operation {
       fill: none;
-      stroke: $svg-icon-tint;
+      stroke: $svg-icon-color;
       @extend %svg-icon-attributes;
     }
     & .svg-phone {
-      fill: $svg-icon-tint;
+      fill: $svg-icon-color;
       @extend %svg-icon-attributes;
     }
     & .svg-location-marker {
-      fill: $svg-icon-tint;
+      fill: $svg-icon-color;
       @extend %svg-icon-attributes;
     }
   }
