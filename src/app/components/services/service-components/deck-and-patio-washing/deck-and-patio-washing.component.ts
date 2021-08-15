@@ -1,15 +1,39 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
+
+// RxJS
+import { Subscription } from 'rxjs';
+
+// Models, Services
+import { BusinessInformationService } from 'src/app/services/business-information.service';
+import { WindowSizeService } from 'src/app/services/window-size.service';
+import { WindowSize } from 'src/app/shared/models/window-size';
 
 @Component({
   selector: 'app-deck-and-patio-washing',
   templateUrl: './deck-and-patio-washing.component.html',
-  styleUrls: ['./deck-and-patio-washing.component.scss']
+  styleUrls: [
+    './deck-and-patio-washing.component.scss',
+    '../../../../shared/shared-services-styles.scss',
+  ]
 })
 export class DeckAndPatioWashingComponent implements OnInit {
+  city: string = this.businessInformationService.city;
+  state: string = this.businessInformationService.state;
+  windowSize: WindowSize | null = null;
+  private subscriptions: Subscription = new Subscription();
 
-  constructor() { }
+  constructor(
+    private businessInformationService: BusinessInformationService,
+    private windowSizeService: WindowSizeService
+  ) { }
 
-  ngOnInit(): void {
+  ngOnDestroy(): void {
+    this.subscriptions.unsubscribe();
   }
 
+  ngOnInit(): void {
+    this.subscriptions.add(this.windowSizeService.windowSize.subscribe(
+      response => this.windowSize = response
+    ));
+  }
 }

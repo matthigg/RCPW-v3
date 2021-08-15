@@ -1,1 +1,26 @@
-<p>deck-and-patio-washing works!</p>
+<section>
+  <h1>Deck & Patio Washing in {{ city + " " + state }}</h1>
+  <div class="grid-form-info-text-wrapper">
+
+    <!-- Contact Text -->
+    <div class="contact-text">
+      <p>
+        Want your dingy grey or green fence to look almost <span>brand new</span>
+        without painting or staining?
+      </p>
+      <p>
+        We will make your grey and green fence beautiful again. Cleaning, 
+        stripping and staining options available.
+      </p>
+      <p class="contact-text-emphasis">
+        Ask us about washing your deck or patio today!
+      </p>
+    </div>
+
+    <!-- Contact Info -->
+    <app-contact-info class="contact-info" *ngIf="windowSize?.width >= 768"></app-contact-info>
+
+    <!-- Contact Form -->
+    <app-contact-form class="contact-form"></app-contact-form>
+  </div>
+</section>
