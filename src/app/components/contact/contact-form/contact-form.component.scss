@@ -1,20 +1,21 @@
 @import '/src/app/shared/colors';
 
 mat-card {
-  border: 1px solid rgba(0, 0, 0, 0.54);
-  & mat-card-actions:last-child {
-    border: 2px solid transparent;
+  border: 1px solid $quinary-color;
+  & mat-card-actions {
     display: flex;
     justify-content: center;
     margin-bottom: 0.5rem;
     padding-top: 0;
-    // & button.active {
-    //   background-color: #333;
-    //   background-color: red;
-    //   border: 2px solid #f3d333;
-    //   border-radius: 6px;
-    //   color: #fafafa;
-    // }
+    & #button-get-free-estimate {
+      &.mat-button-disabled {
+        border: 1px solid transparent;
+      }
+      &:not(.mat-button-disabled) {
+        border: 1px solid $quinary-color;
+        color: $quinary-color;
+      }
+    }
   }
   & mat-card-content {
     column-gap: 1.25rem;

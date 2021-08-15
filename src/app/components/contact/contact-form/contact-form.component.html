@@ -101,9 +101,10 @@
     <!-- Submit Button -->
     <mat-card-actions>
       <button 
-        #submitButton
+        id="button-get-free-estimate"
         mat-raised-button 
         type="submit"
+        #submitButton
         [disabled]="contactForm.invalid"
         [ngClass]="{ 'active': !submitButton.disabled }">
         Get Your Free Estimate!
