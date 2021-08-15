@@ -28,7 +28,7 @@ $s3-bucket: 'https://rns-static-and-media-files.s3.amazonaws.com/static';
 }
 
 // Surface Cleaning
-.card-background-concrete-cleaning.show-image {
+.card-background-exterior-house-washing.show-image {
   // @media (min-width: 0px) {
   //   background-image:                   url('#{$s3-bucket}/#{$surface-cleaning-140kb}/1x-surface-cleaning-01-320.jpg');
   //   background-image: -webkit-image-set(url('#{$s3-bucket}/#{$surface-cleaning-140kb}/1x-surface-cleaning-01-320.webp') 1x, url('#{$s3-bucket}/#{$surface-cleaning-140kb}/2x-surface-cleaning-01-320.webp') 2x);  
@@ -47,7 +47,7 @@ $s3-bucket: 'https://rns-static-and-media-files.s3.amazonaws.com/static';
 }
 
 // Soft Wash
-.card-background-soft-wash.show-image {
+.card-background-concrete-and-brick-washing.show-image {
   // @media (min-width: 0px) {
   //   background-image:                   url('#{$s3-bucket}/#{$soft-wash-140kb}/1x-soft-wash-01-320.jpg');
   //   background-image: -webkit-image-set(url('#{$s3-bucket}/#{$soft-wash-140kb}/1x-soft-wash-01-320.webp') 1x, url('#{$s3-bucket}/#{$soft-wash-140kb}/2x-soft-wash-01-320.webp') 2x);  
@@ -66,7 +66,7 @@ $s3-bucket: 'https://rns-static-and-media-files.s3.amazonaws.com/static';
 }
 
 // Outdoor Stain Removal
-.card-background-outdoor-stain-removal.show-image {
+.card-background-deck-and-patio-washing.show-image {
   // @media (min-width: 0px) {
   //   background-image:                   url('#{$s3-bucket}/#{$outdoor-stain-removal-140kb}/1x-outdoor-stain-removal-01-320.jpg');
   //   background-image: -webkit-image-set(url('#{$s3-bucket}/#{$outdoor-stain-removal-140kb}/1x-outdoor-stain-removal-01-320.webp') 1x, url('#{$s3-bucket}/#{$outdoor-stain-removal-140kb}/2x-outdoor-stain-removal-01-320.webp') 2x);  

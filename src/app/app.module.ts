@@ -25,25 +25,24 @@ import { MatToolbarModule } from '@angular/material/toolbar';
 // Components
 import { AboutComponent } from './components/about/about.component';
 import { AppComponent } from './app.component';
-import { ConcreteCleaningComponent } from './components/our-services/service-components/concrete-cleaning/concrete-cleaning.component';
+import { ConcreteAndBrickWashingComponent } from './components/services/service-components/concrete-and-brick-washing/concrete-and-brick-washing.component';
 import { ContactComponent } from './components/contact/contact.component';
 import { ContactFormComponent } from './components/contact/contact-form/contact-form.component';
 import { ContactFormStepperComponent } from './components/home/contact-form-stepper/contact-form-stepper.component';
 import { ContactInfoComponent } from './components/contact/contact-info/contact-info.component';
-import { DeckCleaningAndRestorationComponent } from './components/our-services/service-components/deck-cleaning-and-restoration/deck-cleaning-and-restoration.component';
-import { FenceCleaningComponent } from './components/our-services/service-components/fence-cleaning/fence-cleaning.component';
+import { DeckAndPatioWashingComponent } from './components/services/service-components/deck-and-patio-washing/deck-and-patio-washing.component';
+import { DeckSealingAndStainingComponent } from './components/services/service-components/deck-sealing-and-staining/deck-sealing-and-staining.component';
+import { ExteriorHouseWashingComponent } from './components/services/service-components/exterior-house-washing/exterior-house-washing.component';
+import { FenceCleaningComponent } from './components/services/service-components/fence-cleaning/fence-cleaning.component';
 import { FooterComponent } from './components/footer/footer.component';
 import { HomeComponent } from './components/home/home.component';
 import { MobileFooterComponent } from './components/mobile-footer/mobile-footer.component';
 import { NavToolbarComponent } from './components/nav-toolbar/nav-toolbar.component';
 import { OurWorkComponent } from './components/our-work/our-work.component';
-import { OutdoorStainRemovalComponent } from './components/our-services/service-components/outdoor-stain-removal/outdoor-stain-removal.component';
 import { PictureDialogComponent } from './components/our-work/dialog/picture-dialog/picture-dialog.component';
-import { ServiceComponentsComponent } from './components/our-services/service-components/service-components.component';
-import { ServicesComponent } from './components/our-services/services.component';
-import { SoftWashComponent } from './components/our-services/service-components/soft-wash/soft-wash.component';
+import { ServiceComponentsComponent } from './components/services/service-components/service-components.component';
+import { ServicesComponent } from './components/services/services.component';
 import { SvgSpriteSheetComponent } from './components/svg-sprite-sheet/svg-sprite-sheet.component';
-import { SurfaceCleaningComponent } from './components/our-services/service-components/surface-cleaning/surface-cleaning.component';
 import { ThankYouComponent } from './components/thank-you/thank-you.component';
 
 // Pipes
@@ -53,27 +52,26 @@ import { ConsoleLogPipe } from './shared/pipes/console-log.pipe';
   declarations: [
     AboutComponent,
     AppComponent,
+    ConcreteAndBrickWashingComponent,
     ConsoleLogPipe,
     ContactComponent,
     ContactFormComponent,
+    ContactFormStepperComponent,
     ContactInfoComponent,
-    DeckCleaningAndRestorationComponent,
+    DeckAndPatioWashingComponent,
+    DeckSealingAndStainingComponent,
+    ExteriorHouseWashingComponent,
     FenceCleaningComponent,
     FooterComponent,
     HomeComponent,
+    MobileFooterComponent,
     NavToolbarComponent,
     OurWorkComponent,
-    OutdoorStainRemovalComponent,
     PictureDialogComponent,
     ServiceComponentsComponent,
     ServicesComponent,
-    SoftWashComponent,
     SvgSpriteSheetComponent,
-    SurfaceCleaningComponent,
-    ContactFormStepperComponent,
     ThankYouComponent,
-    ConcreteCleaningComponent,
-    MobileFooterComponent,
   ],
   entryComponents: [ PictureDialogComponent ],
   imports: [
