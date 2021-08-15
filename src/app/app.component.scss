@@ -1,18 +1,21 @@
+@import 'shared/colors';
+
 $button-transition: all 0.2s ease-in;
 // $url: 'https://rns-static-and-media-files.s3.amazonaws.com/static/img/house-01/375kb/';
 $url: '';
 
+
 mat-sidenav-container {
   height: 100%;
   & .background-image {
-    background-color: #020305;
+    background-color: $secondary-color;
     background-size: cover;
     height: 100vh;
     position: fixed;
     width: 100%;
     z-index: -1;
     &.blurred-image {
-      background-image: url($url + '1x-house-01-576.jpg');
+      // background-image: url($url + '1x-house-01-576.jpg');
       filter: blur(4px);
       opacity: 1;
       transition: 1s ease-in-out;
@@ -40,31 +43,31 @@ mat-sidenav-container {
     }
   }
   & .background-image.final-image.show-image {
-    @media (min-width: 0px) {
-      background-image:                   url($url + '1x-house-01-576.jpg');
-      background-image: -webkit-image-set(url($url + '1x-house-01-576.webp') 1x); 
-      background-image:         image-set(url($url + '1x-house-01-576.jpg') 1x);
-    }
-    @media (min-width: 768px) {
-      background-image:                   url($url + '1x-house-01-768.jpg');
-      background-image: -webkit-image-set(url($url + '1x-house-01-768.webp') 1x); 
-      background-image:         image-set(url($url + '1x-house-01-768.jpg') 1x);
-    }
-    @media (min-width: 992px) {
-      background-image:                   url($url + '1x-house-01-992.jpg');
-      background-image: -webkit-image-set(url($url + '1x-house-01-992.webp') 1x); 
-      background-image:         image-set(url($url + '1x-house-01-992.jpg') 1x);
-    }
-    @media (min-width: 1200px) {
-      background-image:                   url($url + '1x-house-01-1200.jpg');
-      background-image: -webkit-image-set(url($url + '1x-house-01-1200.webp') 1x); 
-      background-image:         image-set(url($url + '1x-house-01-1200.jpg') 1x);
-    }
-    @media (min-width: 1440px) {
-      background-image:                   url($url + '1x-house-01-1440.jpg');
-      background-image: -webkit-image-set(url($url + '1x-house-01-1440.webp') 1x); 
-      background-image:         image-set(url($url + '1x-house-01-1440.jpg') 1x);
-    }
+    // @media (min-width: 0px) {
+    //   background-image:                   url($url + '1x-house-01-576.jpg');
+    //   background-image: -webkit-image-set(url($url + '1x-house-01-576.webp') 1x); 
+    //   background-image:         image-set(url($url + '1x-house-01-576.jpg') 1x);
+    // }
+    // @media (min-width: 768px) {
+    //   background-image:                   url($url + '1x-house-01-768.jpg');
+    //   background-image: -webkit-image-set(url($url + '1x-house-01-768.webp') 1x); 
+    //   background-image:         image-set(url($url + '1x-house-01-768.jpg') 1x);
+    // }
+    // @media (min-width: 992px) {
+    //   background-image:                   url($url + '1x-house-01-992.jpg');
+    //   background-image: -webkit-image-set(url($url + '1x-house-01-992.webp') 1x); 
+    //   background-image:         image-set(url($url + '1x-house-01-992.jpg') 1x);
+    // }
+    // @media (min-width: 1200px) {
+    //   background-image:                   url($url + '1x-house-01-1200.jpg');
+    //   background-image: -webkit-image-set(url($url + '1x-house-01-1200.webp') 1x); 
+    //   background-image:         image-set(url($url + '1x-house-01-1200.jpg') 1x);
+    // }
+    // @media (min-width: 1440px) {
+    //   background-image:                   url($url + '1x-house-01-1440.jpg');
+    //   background-image: -webkit-image-set(url($url + '1x-house-01-1440.webp') 1x); 
+    //   background-image:         image-set(url($url + '1x-house-01-1440.jpg') 1x);
+    // }
   }
   & .mat-sidenav {
     background: #333;

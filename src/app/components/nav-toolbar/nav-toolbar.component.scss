@@ -1,3 +1,5 @@
+@import '../../shared/colors';
+
 $button-transition: all 0.2s ease-in;
 $mat-toolbar-transition: all 0.2s ease-in;
 $rns-logo-transition: all 0.2s ease-in;
@@ -5,7 +7,8 @@ $nav-logo-dimensions: 8rem;
 $nav-logo-dimensions-mobile: 5rem;
 $nav-logo-dimensions-expanded: 12rem;
 $svg-icon-dimensions: calc(1rem + 0.5vw);
-$url: 'https://rns-static-and-media-files.s3.amazonaws.com/static/img/rns-logo-01/340kb/';
+// $url: 'https://rns-static-and-media-files.s3.amazonaws.com/static/img/rns-logo-01/340kb/';
+$url: '';
 
 nav {
   position: fixed;
@@ -19,7 +22,7 @@ nav {
   //   margin-top: 1rem;
   // }
   & mat-toolbar {
-    background-color: #333;
+    background-color: $quinary-color;
     color: white;
     display: flex;
     justify-content: flex-end;
@@ -36,11 +39,11 @@ nav {
         font-size: 0.85rem;
         transition: $button-transition;
         &.active-route {
-          border-bottom: 2px solid #f3d333;
+          border-bottom: 2px solid $tertiary-color;
         }
         &:hover {
-          border-bottom: 2px solid #f3d333;
-          color: #f3d333;
+          border-bottom: 2px solid $tertiary-color;
+          color: $tertiary-color;
           transition: $button-transition;
         }
       }
@@ -78,7 +81,7 @@ nav {
     }
     @media (min-width: 768px) {
       &.expanded {
-        background-color: rgba(0, 0, 0, 0.87);
+        @include quinary-color-rgba-background(0.8);
         height: calc(64px + 1rem);
         transition: $mat-toolbar-transition;
         & .nav-buttons {
@@ -111,20 +114,20 @@ nav {
         width: $nav-logo-dimensions-expanded;
       }
     }
-    @media (min-width: 0px) {
-      background-image:                   url($url + '1x-rns-logo-01-160.png');
-      background-image: -webkit-image-set(url($url + '1x-rns-logo-01-160.webp') 1x, url($url + '2x-rns-logo-01-160.webp') 2x);  
-      background-image:         image-set(url($url + '1x-rns-logo-01-160.png') 1x, url($url + '2x-rns-logo-01-160.png') 2x);
-    }
-    @media (min-width: 320px) {
-      background-image:                   url($url + '1x-rns-logo-01-160.png');
-      background-image: -webkit-image-set(url($url + '1x-rns-logo-01-160.webp') 1x, url($url + '2x-rns-logo-01-160.webp') 2x);  
-      background-image:         image-set(url($url + '1x-rns-logo-01-160.png') 1x, url($url + '2x-rns-logo-01-160.png') 2x);
-    }
-    @media (min-width: 576px) {
-      background-image:                   url($url + '1x-rns-logo-01-160.png');
-      background-image: -webkit-image-set(url($url + '1x-rns-logo-01-160.webp') 1x, url($url + '2x-rns-logo-01-160.webp') 2x);  
-      background-image:         image-set(url($url + '1x-rns-logo-01-160.png') 1x, url($url + '2x-rns-logo-01-160.png') 2x);
-    }
+    // @media (min-width: 0px) {
+    //   background-image:                   url($url + '1x-rns-logo-01-160.png');
+    //   background-image: -webkit-image-set(url($url + '1x-rns-logo-01-160.webp') 1x, url($url + '2x-rns-logo-01-160.webp') 2x);  
+    //   background-image:         image-set(url($url + '1x-rns-logo-01-160.png') 1x, url($url + '2x-rns-logo-01-160.png') 2x);
+    // }
+    // @media (min-width: 320px) {
+    //   background-image:                   url($url + '1x-rns-logo-01-160.png');
+    //   background-image: -webkit-image-set(url($url + '1x-rns-logo-01-160.webp') 1x, url($url + '2x-rns-logo-01-160.webp') 2x);  
+    //   background-image:         image-set(url($url + '1x-rns-logo-01-160.png') 1x, url($url + '2x-rns-logo-01-160.png') 2x);
+    // }
+    // @media (min-width: 576px) {
+    //   background-image:                   url($url + '1x-rns-logo-01-160.png');
+    //   background-image: -webkit-image-set(url($url + '1x-rns-logo-01-160.webp') 1x, url($url + '2x-rns-logo-01-160.webp') 2x);  
+    //   background-image:         image-set(url($url + '1x-rns-logo-01-160.png') 1x, url($url + '2x-rns-logo-01-160.png') 2x);
+    // }
   }
 }
