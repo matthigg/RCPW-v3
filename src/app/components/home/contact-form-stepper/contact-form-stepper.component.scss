@@ -1,59 +1,54 @@
-mat-horizontal-stepper {
-  background-color: rgba(0, 0, 0, 0.87);
+@import '../../../shared/colors';
+
+#contact-form-stepper-wrapper {
+  background-color: $quinary-color;
   border-radius: 0.35rem;
-  color: #fafafa;
-  font-size: 0.85rem;
-  padding: 0.5rem 0.5rem 0 0.5rem;
-  & .button-wrapper-step-1 {
-    display: flex;
-    justify-content: flex-end;
+  color: #fff;
+  margin: none;
+  padding-top: 1rem;
+  // text-align: center;
+  & #contact-form-stepper-header {
+    text-align: center;
   }
-  & .buttons-wrapper-step-2 {
-    display: flex;
-    justify-content: space-between;
-  }
-  & mat-form-field {
-    display: block;
-  }
-  & .services-error-wrapper {
-    height: 12px;
-    margin-bottom: 1rem;
-    overflow: hidden;
-    & .services-error {
-      font-size: 85%;
-      font-weight: 400;
+  & mat-horizontal-stepper {
+    background-color: $quinary-color;
+    border-radius: 0.35rem;
+    color: #fff;
+    font-size: 0.85rem;
+    padding: 0.5rem 0.5rem 0 0.5rem;
+    & .button-wrapper-step-1 {
+      display: flex;
+      justify-content: flex-end;
+    }
+    & .buttons-wrapper-step-2 {
+      display: flex;
+      justify-content: space-between;
+    }
+    & mat-form-field {
+      display: block;
+    }
+    & .services-error-wrapper {
+      height: 12px;
+      margin-bottom: 1rem;
       overflow: hidden;
-      position: relative;
-      text-align: center;
-      top: -1rem;
-      &.show-error {
-        top: 0;
-        transition: 0.15s ease-out;
+      & .services-error {
+        font-size: 85%;
+        font-weight: 400;
+        overflow: hidden;
+        position: relative;
+        text-align: center;
+        top: -1rem;
+        &.show-error {
+          top: 0;
+          transition: 0.15s ease-out;
+        }
       }
     }
   }
 }
 
-.sign-wrapper {
-  align-items: center;
-  background-color: rgba(0, 0, 0, 0.87);
-  border-radius: 0.5rem;
-  color: white;
-  display: flex;
-  font-weight: 500;
-  padding: 1rem;
-  position: absolute;
-  & .svg-right-arrow {
-    fill: none;
-    height: calc(1rem + 0.15vw);
-    margin-left: 0.5rem;
-    stroke: #fafafa;
-    width: calc(1rem + 0.15vw);
+::ng-deep #contact-form-stepper {
+  & .mat-horizontal-stepper-header-container {
+    display: none;
   }
 }
-
-// ::ng-deep {
-//   .mat-step-header .mat-step-label.mat-step-label-active {
-//     color: #fafafa;
-//   }
-// }

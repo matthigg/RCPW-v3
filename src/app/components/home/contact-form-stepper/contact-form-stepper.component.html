@@ -1,132 +1,124 @@
-<!-- Contact Form Stepper Sign -->
-<div 
-  class="sign-wrapper" 
-  [@slideRight]="animationSlideRight || viewed ? 'slide-right' : 'stationary'">
-  Get A Free Estimate
-  <svg class="svg-right-arrow">
-    <use href=#svg-right-arrow></use>
-  </svg>
-</div>
-
 <!-- Contact Form Stepper -->
-<mat-horizontal-stepper 
-  class="dark-theme"
-  [linear]="true" 
-  #stepper
-  [@fadeIn]="animationFadeIn || viewed ? 'show' : 'hide'">
+<div id="contact-form-stepper-wrapper">
+  <div id="contact-form-stepper-header">Request a Free Estimate</div>
+  <mat-horizontal-stepper 
+    class="dark-theme"
+    id="contact-form-stepper"
+    [linear]="true" 
+    #stepper
+    [@fadeIn]="animationFadeIn || viewed ? 'show' : 'hide'">
 
-  <!-- Step 1 -->
-  <mat-step [stepControl]="formGroupStep1">
-    <form [formGroup]="formGroupStep1">
-      <ng-template matStepLabel>Information</ng-template>
+    <!-- Step 1 -->
+    <mat-step [stepControl]="formGroupStep1">
+      <form [formGroup]="formGroupStep1">
 
-      <!-- Name -->
-      <mat-form-field>
-        <mat-label>Name *</mat-label>
-        <input formControlName="name" matInput type="text">
-        <mat-error *ngIf="name.errors?.required">Please enter your name</mat-error>
-      </mat-form-field>
+        <!-- Name -->
+        <mat-form-field>
+          <mat-label>Name *</mat-label>
+          <input formControlName="name" matInput type="text">
+          <mat-error *ngIf="name.errors?.required">Please enter your name</mat-error>
+        </mat-form-field>
 
-      <!-- Phone -->
-      <mat-form-field>
-        <mat-label>Phone *</mat-label>
-        <input formControlName="phone" matInput type="tel">
-        <mat-error *ngIf="phone.errors?.required">Please enter your phone number</mat-error>
-      </mat-form-field>
+        <!-- Phone -->
+        <mat-form-field>
+          <mat-label>Phone *</mat-label>
+          <input formControlName="phone" matInput type="tel">
+          <mat-error *ngIf="phone.errors?.required">Please enter your phone number</mat-error>
+        </mat-form-field>
 
-      <!-- Address -->
-      <mat-form-field>
-        <mat-label>Address *</mat-label>
-        <input formControlName="address" matInput type="text">
-        <mat-error *ngIf="address.errors?.required">Please enter the property address</mat-error>
-      </mat-form-field>
+        <!-- Address -->
+        <mat-form-field>
+          <mat-label>Address *</mat-label>
+          <input formControlName="address" matInput type="text">
+          <mat-error *ngIf="address.errors?.required">Please enter the property address</mat-error>
+        </mat-form-field>
 
-      <!-- Email -->
-      <mat-form-field>
-        <mat-label>Email</mat-label>
-        <input formControlName="email" matInput type="text">
-        <mat-error *ngIf="email.errors?.required">Please enter an email address</mat-error>
-        <mat-error *ngIf="email.errors?.email">Please enter a valid email address</mat-error>
-      </mat-form-field>
+        <!-- Email -->
+        <mat-form-field>
+          <mat-label>Email</mat-label>
+          <input formControlName="email" matInput type="text">
+          <mat-error *ngIf="email.errors?.required">Please enter an email address</mat-error>
+          <mat-error *ngIf="email.errors?.email">Please enter a valid email address</mat-error>
+        </mat-form-field>
 
-      <!-- Number of Stories -->
-      <mat-form-field appearance="fill">
-        <mat-label>Number of stories</mat-label>
-        <mat-select formControlName="numberOfStories" >
-          <mat-option value="1">1</mat-option>
-          <mat-option value="2">2</mat-option>
-          <mat-option value="3">3</mat-option>
-          <mat-option value="4">4+</mat-option>
-        </mat-select>
-        <mat-error *ngIf="numberOfStories.errors?.required">Please enter the number of stories</mat-error>
-      </mat-form-field>
+        <!-- Number of Stories -->
+        <mat-form-field appearance="fill">
+          <mat-label>Number of stories</mat-label>
+          <mat-select formControlName="numberOfStories" >
+            <mat-option value="1">1</mat-option>
+            <mat-option value="2">2</mat-option>
+            <mat-option value="3">3</mat-option>
+            <mat-option value="4">4+</mat-option>
+          </mat-select>
+          <mat-error *ngIf="numberOfStories.errors?.required">Please enter the number of stories</mat-error>
+        </mat-form-field>
 
-      <!-- Type of Exterior -->
-      <mat-form-field appearance="fill">
-        <mat-label>Type of exterior</mat-label>
-        <mat-select formControlName="typeOfExterior">
-          <mat-option value="Vinyl">Vinyl</mat-option>
-          <mat-option value="Wood">Wood</mat-option>
-          <mat-option value="Brick">Brick</mat-option>
-          <mat-option value="Aluminum">Aluminum</mat-option>
-          <mat-option value="Other">Other</mat-option>
-        </mat-select>
-        <mat-error *ngIf="typeOfExterior.errors?.required">Please enter the type of exterior</mat-error>
-      </mat-form-field>
+        <!-- Type of Exterior -->
+        <mat-form-field appearance="fill">
+          <mat-label>Type of exterior</mat-label>
+          <mat-select formControlName="typeOfExterior">
+            <mat-option value="Vinyl">Vinyl</mat-option>
+            <mat-option value="Wood">Wood</mat-option>
+            <mat-option value="Brick">Brick</mat-option>
+            <mat-option value="Aluminum">Aluminum</mat-option>
+            <mat-option value="Other">Other</mat-option>
+          </mat-select>
+          <mat-error *ngIf="typeOfExterior.errors?.required">Please enter the type of exterior</mat-error>
+        </mat-form-field>
 
-      <!-- Buttons -->
-      <div class="button-wrapper-step-1">
-        <button mat-button matStepperNext>Next</button>
-      </div>
-    </form>
-  </mat-step>
+        <!-- Buttons -->
+        <div class="button-wrapper-step-1">
+          <button mat-button matStepperNext>Next</button>
+        </div>
+      </form>
+    </mat-step>
 
-  <!-- Step 2 -->
-  <mat-step [stepControl]="formGroupStep2">
-    <form [formGroup]="formGroupStep2" (submit)="onSubmit()">
-      <ng-template matStepLabel>Services</ng-template>
+    <!-- Step 2 -->
+    <mat-step [stepControl]="formGroupStep2">
+      <form [formGroup]="formGroupStep2" (submit)="onSubmit()">
 
-      <!-- Services -->
-      <div class="services-wrapper">
-        <ng-container>
-          <mat-selection-list formControlName="services" (selectionChange)="onClickService()">
-            <mat-list-option value="Fence Cleaning">Fence Cleaning</mat-list-option>
-            <mat-list-option value="Surface Cleaning">Surface Cleaning</mat-list-option>
-            <mat-list-option value="Soft Wash">Soft Wash</mat-list-option>
-            <mat-list-option value="Stain Removal">Stain Removal</mat-list-option>
-            <mat-list-option value="Deck Cleaning">Deck Cleaning</mat-list-option>
-          </mat-selection-list>
-          <div class="services-error-wrapper">
-            <mat-error 
-              [ngClass]="{ 
-                'services-error': true,
-                'show-error': servicesFormControlError.value?.noSelectedService ? true : false
-              }">
-              Please select at least one service
-            </mat-error>
-          </div>
-        </ng-container>
-      </div>
+        <!-- Services -->
+        <div class="services-wrapper">
+          <ng-container>
+            <mat-selection-list formControlName="services" (selectionChange)="onClickService()">
+              <mat-list-option value="Fence Cleaning">Fence Cleaning</mat-list-option>
+              <mat-list-option value="Surface Cleaning">Surface Cleaning</mat-list-option>
+              <mat-list-option value="Soft Wash">Soft Wash</mat-list-option>
+              <mat-list-option value="Stain Removal">Stain Removal</mat-list-option>
+              <mat-list-option value="Deck Cleaning">Deck Cleaning</mat-list-option>
+            </mat-selection-list>
+            <div class="services-error-wrapper">
+              <mat-error 
+                [ngClass]="{ 
+                  'services-error': true,
+                  'show-error': servicesFormControlError.value?.noSelectedService ? true : false
+                }">
+                Please select at least one service
+              </mat-error>
+            </div>
+          </ng-container>
+        </div>
 
-      <!-- Message -->
-      <mat-form-field appearance="outline">
-        <mat-label>Send us a message</mat-label>
-        <textarea formControlName="message" matInput></textarea>
-        <mat-error *ngIf="message.errors?.required">Please enter a message</mat-error>
-      </mat-form-field>
+        <!-- Message -->
+        <mat-form-field appearance="outline">
+          <mat-label>Send us a message</mat-label>
+          <textarea formControlName="message" matInput></textarea>
+          <mat-error *ngIf="message.errors?.required">Please enter a message</mat-error>
+        </mat-form-field>
 
-      <!-- Buttons -->
-      <div class="buttons-wrapper-step-2">
-        <button mat-button matStepperPrevious type="button">Back</button>
-        <button 
-          #submitButton
-          mat-raised-button 
-          type="submit"
-          [disabled]="formGroupStep1.invalid || formGroupStep2.invalid">
-          Get Your Free Estimate!
-        </button>
-      </div>
-    </form>
-  </mat-step>
+        <!-- Buttons -->
+        <div class="buttons-wrapper-step-2">
+          <button mat-button matStepperPrevious type="button">Back</button>
+          <button 
+            #submitButton
+            mat-raised-button 
+            type="submit"
+            [disabled]="formGroupStep1.invalid || formGroupStep2.invalid">
+            Get Your Free Estimate!
+          </button>
+        </div>
+      </form>
+    </mat-step>
 
-</mat-horizontal-stepper>
+  </mat-horizontal-stepper>
+</div>
