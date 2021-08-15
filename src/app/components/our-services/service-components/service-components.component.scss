@@ -108,6 +108,7 @@ mat-card {
   width: 20vw;
   & mat-card-actions {
     align-items: center;
+    color: $quinary-color;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -123,7 +124,7 @@ mat-card {
         height: calc(1rem + 0.15vw);
         left: 0.2rem;
         position: relative;
-        stroke: rgba(0, 0, 0, 0.87);
+        stroke: $quinary-color;
         width: calc(1rem + 0.15vw);
         transition: $mat-card-transition;
       }
