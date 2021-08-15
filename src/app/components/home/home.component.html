@@ -19,13 +19,11 @@
 <!-- Landing Page Footer Toolbar -->
 <mat-toolbar>
   <span> Pressure Washing Services in {{ city }} {{ state }}</span>
-  <span class="italic" *ngIf="windowSize.width > 1340px">
-    Soft Wash 
-    &nbsp;•&nbsp; Concrete Cleaning 
-    &nbsp;•&nbsp; Outdoor Stain Removal 
-    &nbsp;•&nbsp; Deck Cleaning & Restoration 
-    &nbsp;•&nbsp; Fence Cleaning
-  </span>
+  <ng-container *ngIf="windowSize.width > 1340px">
+    <span class="italic" *ngFor="let service of services">
+      &nbsp;•&nbsp; {{ service }}
+    </span>
+  </ng-container>
 </mat-toolbar>
 
 <!-- Section - Services -->

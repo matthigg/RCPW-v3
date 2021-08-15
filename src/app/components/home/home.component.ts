@@ -38,6 +38,5 @@ export class HomeComponent implements OnDestroy, OnInit {
     this.subscriptions.add(this.windowSizeService.windowSize.subscribe(
       response => this.windowSize = response
     ));
-    console.log('--- x:', this.businessInformationService)
   }
 }
