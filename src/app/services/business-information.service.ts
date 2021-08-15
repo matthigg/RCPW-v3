@@ -4,12 +4,12 @@ import { Injectable } from '@angular/core';
   providedIn: 'root'
 })
 export class BusinessInformationService {
-  address: string = '505 Compass Ct.';
+  address: string = '123 Main St.';
   businessHours: string = 'Hours Vary';
-  city: string = 'Sneads Ferry';
-  email: string = 'jmfroio10@gmail.com';
-  phoneNumber: string = '(602) 301-2584';
-  state: string = 'NC';
+  city: string = 'Richmond';
+  email: string = 'rvaprowash@gmail.com';
+  phoneNumber: string = '(804) 625-2405';
+  state: string = 'VA';
   zipcode: string = '28460';
 
   constructor() { }

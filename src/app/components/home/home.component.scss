@@ -1,3 +1,5 @@
+@import '../../shared//colors';
+
 $mat-card-transition: 0.25s ease-in-out;
 $off-white: rgba(255, 255, 255, 0.87);
 $svg-icon-dimensions: calc(1rem + 0.5vw);
@@ -16,7 +18,7 @@ $svg-icon-dimensions: calc(1rem + 0.5vw);
 }
 
 mat-toolbar {
-  background-color: rgba(0, 0, 0, 0.87);
+  background-color: $quinary-color;
   color: white;
   display: flex;
   justify-content: space-around;
