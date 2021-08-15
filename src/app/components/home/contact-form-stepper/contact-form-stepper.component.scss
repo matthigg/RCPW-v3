@@ -25,6 +25,15 @@
     & .buttons-wrapper-step-2 {
       display: flex;
       justify-content: space-between;
+      & #button-get-free-estimate {
+        &.mat-button-disabled {
+          border: 1px solid transparent;
+        }
+        &:not(.mat-button-disabled) {
+          border: 1px solid $quinary-color;
+          color: $quinary-color;
+        }
+      }
     }
     & mat-form-field {
       display: block;

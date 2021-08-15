@@ -109,11 +109,17 @@
         <div class="buttons-wrapper-step-2">
           <button mat-button matStepperPrevious type="button">Back</button>
           <button 
-            #submitButton
+            id="button-get-free-estimate"
             mat-raised-button 
             type="submit"
+            #submitButton
             [disabled]="formGroupStep1.invalid || formGroupStep2.invalid">
-            Get Your Free Estimate!
+            <ng-container *ngIf="formGroupStep1.invalid || formGroupStep2.invalid; else enabledButton">
+              Select a Service Above
+            </ng-container>
+            <ng-template #enabledButton>
+              Get Your Free Estimate!
+            </ng-template>
           </button>
         </div>
       </form>
