@@ -3,9 +3,11 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  contactFormAPI: 'https://olp4b4q411.execute-api.us-east-1.amazonaws.com/prod/contact-form',
+  // contactFormAPI: 'https://olp4b4q411.execute-api.us-east-1.amazonaws.com/prod/contact-form',
+  contactFormAPI: '',
   production: false,
-  rootImageURL: 'https://rns-static-and-media-files.s3.amazonaws.com/media/images/',
+  // rootImageURL: 'https://rns-static-and-media-files.s3.amazonaws.com/media/images/',
+  rootImageURL: '',
 };
 
 /*
