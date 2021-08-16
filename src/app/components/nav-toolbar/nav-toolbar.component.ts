@@ -19,6 +19,13 @@ export class NavToolbarComponent implements OnDestroy, OnInit {
   phoneNumber: string = this.businessInformationService.phoneNumber;
   pageOffset: PageOffset | null = null;
   windowSize: WindowSize | null = null;
+  navLinks: any = [
+    { name: 'Home',     routerLink: '/' },
+    // { name: 'About',    routerLink: '/about' },
+    { name: 'Services', routerLink: '/services' },
+    // { name: 'Our Work', routerLink: '/our-work' },
+    { name: 'Contact',  routerLink: '/contact' },
+  ];
   private subscriptions: Subscription = new Subscription();
   @Output() openDrawer: EventEmitter<any> = new EventEmitter();
 

@@ -20,42 +20,17 @@
       </span>
 
       <!-- Nav Buttons -->
-      <button 
-        mat-button 
-        type="button" 
-        routerLinkActive="active-route" 
-        routerLink="/" 
-        [routerLinkActiveOptions]="{ exact: true }">
-        Home
-      </button>
-      <button 
-        mat-button 
-        routerLinkActive="active-route" 
-        routerLink="/about"
-        type="button">
-        About
-      </button>
-      <button 
-        mat-button 
-        routerLinkActive="active-route"
-        routerLink="/services"
-        type="button">
-        Services
-      </button>
-      <button 
-        mat-button    
-        routerLinkActive="active-route" 
-        routerLink="/our-work"
-        type="button">
-        Our Work
-      </button>
-      <button 
-        mat-button 
-        routerLinkActive="active-route" 
-        routerLink="/contact"
-        type="button">
-        Contact
-      </button>
+
+      <ng-container *ngFor="let navLink of navLinks">
+        <button 
+          mat-button 
+          type="button" 
+          routerLinkActive="active-route" 
+          routerLink="{{ navLink.routerLink }}" 
+          [routerLinkActiveOptions]="navLink.name === 'Home' ? { exact: true } : { exact: false }">
+          {{ navLink.name }}
+        </button>
+      </ng-container>
     </div>
 
     <!-- Hamburger Icon -->
@@ -70,14 +45,4 @@
       </svg>
     </button>
   </mat-toolbar>
-
-  <!-- Free Estimate Button -->
-  <!-- <button 
-    class="button-free-estimate" 
-    mat-raised-button 
-    routerLink="/contact"
-    type="button">
-    Get A Free Estimate!
-  </button> -->
-
 </nav>
