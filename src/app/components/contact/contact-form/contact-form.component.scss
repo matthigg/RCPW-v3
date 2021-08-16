@@ -51,6 +51,9 @@ mat-card {
     & mat-card-subtitle {
       text-align: center;
     }
+    & mat-card-title {
+      color: $quinary-color;
+    }
   }
   & mat-form-field {
     width: 100%;
@@ -61,16 +64,17 @@ mat-card {
         min-height: 2rem;
       }
     }
-    & .form-field-email { grid-area: ffemal; }
-    & .form-field-name { grid-area: ffname; }
-    & .form-field-phone { grid-area: ffphon; }
-    & .form-field-address { grid-area: ffaddr; }
-    & .form-field-number-of-stories { grid-area: ffnmst; }
-    & .form-field-type-of-exterior { grid-area: fftpex; }
+    &.form-field-email { grid-area: ffemal; }
+    &.form-field-name { grid-area: ffname; }
+    &.form-field-phone { grid-area: ffphon; }
+    &.form-field-address { grid-area: ffaddr; }
+    &.form-field-number-of-stories { grid-area: ffnmst; }
+    &.form-field-type-of-exterior { grid-area: fftpex; }
   }
   & .services-wrapper {
     grid-area: svcwrp;
     & h3 {
+      color: $quinary-color;
       margin-bottom: 0.5rem;
       text-align: center;
     }
@@ -80,6 +84,9 @@ mat-card {
       font-weight: 400;
       margin-top: 0;
       text-align: center;
+    }
+    & mat-list-option {
+      color: $quinary-color;
     }
     & .services-error-wrapper {
       height: 12px;
