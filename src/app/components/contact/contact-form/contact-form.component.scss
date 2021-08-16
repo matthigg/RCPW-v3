@@ -24,9 +24,9 @@ mat-card {
     @media (max-width: 1010.98px) {
       grid-template-areas:
         'ffname'
-        'ffemal'
         'ffphon'
         'ffaddr'
+        'ffemal'
         'ffnmst'
         'fftpex'
         'svcwrp'
@@ -36,9 +36,9 @@ mat-card {
     @media (min-width: 1011px) {
       grid-template-areas:
       'ffname svcwrp'
-      'ffemal svcwrp'
       'ffphon svcwrp'
       'ffaddr svcwrp'
+      'ffemal svcwrp'
       'ffnmst svcwrp'
       'fftpex svcwrp'
       'fftxta fftxta';
