@@ -9,6 +9,9 @@ export class BusinessInformationService {
   businessName: string = 'River City Pro Wash';
   city: string = 'Richmond';
   email: string = 'rvaprowash@gmail.com';
+  facebookURL: string = 'https://www.facebook.com/pages/category/Local-Service/River-City-Pro-Wash-722079708136598/';
+  googleBusinessURL: string = '';
+  googleMapsURL: string = '';
   phoneNumber: string = '(804) 625-2405';
   services: string[] = [
     'Exterior House Washing',
@@ -19,8 +22,6 @@ export class BusinessInformationService {
   ]
   state: string = 'VA';
   zipcode: string = '28460';
-  googleBusinessURL: string = '';
-  facebookURL: string = 'https://www.facebook.com/pages/category/Local-Service/River-City-Pro-Wash-722079708136598/';
 
   constructor() { }
 }
