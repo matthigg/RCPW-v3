@@ -4,9 +4,9 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Subscription } from 'rxjs';
 
 // Models, Services
-import { BusinessInformationService } from '../../services/business-information.service';
-import { WindowSizeService } from '../../services/window-size.service';
-import { WindowSize } from '../../shared/models/window-size';
+import { BusinessInformationService } from 'src/app/services/business-information.service';
+import { WindowSizeService } from 'src/app/services/window-size.service';
+import { WindowSize } from 'src/app/shared/models/window-size';
 
 @Component({
   selector: 'app-contact',

@@ -1,3 +1,5 @@
+@import '/src/app/shared/colors';
+
 $off-white: rgba(255, 255, 255, 0.87);
 $svg-icon-dimensions: calc(1rem + 0.5vw);
 %flex-box-column-centered {
@@ -23,8 +25,7 @@ section.footer {
     padding: 0.5rem;
     @extend %flex-box-column-centered;
     & h2 {
-      color: #f3d333;
-      font-family: 'Stencil';
+      color: $tertiary-color;
       margin-top: 0;
       @media (max-width: 1299.98px) {
         font-size: 1.3rem;
@@ -36,7 +37,7 @@ section.footer {
     & p {
       font-size: 1.25rem;
       & span {
-        color: #f3d333;
+        color: $tertiary-color;
         font-style: italic;
         font-weight: 500;
       }
@@ -81,7 +82,7 @@ section.footer {
     padding: 0.5rem;
     @extend %flex-box-column-centered;
     & a {
-      color: #f3d333;
+      color: $tertiary-color;
       text-decoration: none;
       transition: 2s ease-in;
     }
@@ -101,14 +102,14 @@ section.footer {
     @extend %flex-box-column-centered;
     & button {
       background-color: transparent;
-      border: 2px solid #f3d333;
+      border: 2px solid $tertiary-color;
       & i {
-        color: #f3d333;
+        color: $tertiary-color;
         font-size: 2rem;
         line-height: 0;
       }
       &:hover {
-        background-color: #f3d333;
+        background-color: $tertiary-color;
         & i {
           color: rgba(0, 0, 0, 0.87);
         }

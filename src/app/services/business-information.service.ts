@@ -19,6 +19,8 @@ export class BusinessInformationService {
   ]
   state: string = 'VA';
   zipcode: string = '28460';
+  googleBusinessURL: string = '';
+  facebookURL: string = 'https://www.facebook.com/pages/category/Local-Service/River-City-Pro-Wash-722079708136598/';
 
   constructor() { }
 }

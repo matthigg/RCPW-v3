@@ -2,7 +2,7 @@
 
   <!-- Footer Text -->
   <div class="text-wrapper">
-    <h2>R & S PRESSURE WASHING</h2>
+    <h2>{{ businessName }}</h2>
     <p>
       Call us today for a <span>Free Estimate!</span>
     </p>
@@ -11,17 +11,17 @@
 
   <!-- Google Map -->
   <div class="google-map-wrapper">
-    <iframe src="https://www.google.com/maps/d/embed?mid=1M99_6FQvTVBMWYAtWUuxLdrTQzM&hl=en&z=9"></iframe>
+    <!-- <iframe src="{{ googleMapsURL }}"></iframe> -->
   </div>
 
   <!-- SVG Ad Icons -->
   <div class="svg-ad-icons">
-    <a href="https://r-s-pressure-washing.business.site/">
+    <a href="{{ googleBusinessURL }}">
       <svg class="svg-google">
         <use href="#svg-google"></use>
       </svg>
     </a>
-    <a href="https://www.facebook.com/RandS0326/?ref=py_c">
+    <a href="{{ facebookURL }}">
       <svg class="svg-facebook">
         <use href="#svg-facebook"></use>
       </svg>
@@ -38,7 +38,7 @@
   </div>
 
   <!-- Copyright -->
-  <div class="copyright">© 2019 R & S Pressure Washing</div>
+  <div class="copyright">© 2021 {{ businessName }}</div>
 
   <!-- Return To Top Button -->
   <div class="button-return-to-top">
