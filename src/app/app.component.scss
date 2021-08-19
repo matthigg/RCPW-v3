@@ -68,6 +68,8 @@ mat-sidenav-container {
     //   background-image: -webkit-image-set(url($url + '1x-house-01-1440.webp') 1x); 
     //   background-image:         image-set(url($url + '1x-house-01-1440.jpg') 1x);
     // }
+    background-image: url('../assets/images/house-01.jpg');
+    // background: red;
   }
   & .mat-sidenav {
     background: #333;
