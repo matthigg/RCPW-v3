@@ -1,11 +1,12 @@
 <nav>
 
   <!-- Logo -->
-  <div [ngClass]="{
+  <svg [ngClass]="{
     'expanded': pageOffset.pageYOffset === 0,
-    'rns-logo': true
+    'rcpw-logo': true
   }">
-  </div>
+    <use href="#svg-rcpw-logo-nav"></use>
+  </svg>
 
   <!-- Nav Toolbar -->
   <mat-toolbar [ngClass]="{ 'expanded': pageOffset.pageYOffset === 0 }">
