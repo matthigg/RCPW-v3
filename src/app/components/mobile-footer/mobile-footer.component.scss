@@ -26,11 +26,11 @@ $button-hover-transition: all 0.2s ease-in;
       
     }
     &:hover {
-      background-color: #f3d333;
-      color: #333;
+      background-color: $tertiary-color;
+      color: $quinary-color;
       transition: $button-hover-transition;
       & .svg-phone {
-        fill: #333;
+        fill: $quinary-color;
         transition: $button-hover-transition;
       }
     }

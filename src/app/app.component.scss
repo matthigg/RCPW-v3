@@ -72,7 +72,7 @@ mat-sidenav-container {
     // background: red;
   }
   & .mat-sidenav {
-    background: #333;
+    background: $quinary-color;
     height: 100vh;
     position: fixed;
     width: 75vw;
@@ -82,17 +82,17 @@ mat-sidenav-container {
         border-bottom: 2px solid transparent;
         border-radius: 4px 4px 0 0;
         color: white;
-        font-size: 2rem;
+        font-size: 1rem;
         padding: 1rem 0;
         width: 100%;
         transition: $button-transition;
         &.active-route {
-          border-bottom: 2px solid #f3d333;
-          color: #f3d333;
+          border-bottom: 2px solid $tertiary-color;
+          color: $tertiary-color;
         }
         &:hover {
-          border-bottom: 2px solid #f3d333;
-          color: #f3d333;
+          border-bottom: 2px solid $tertiary-color;
+          color: $tertiary-color;
           transition: $button-transition;
         }
       }
