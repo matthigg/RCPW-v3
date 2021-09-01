@@ -26,6 +26,7 @@ export class NavToolbarComponent implements OnDestroy, OnInit {
     // { name: 'Our Work', routerLink: '/our-work' },
     { name: 'Contact',  routerLink: '/contact' },
   ];
+  userHasScrolledDown: boolean = false;
   private subscriptions: Subscription = new Subscription();
   @Output() openDrawer: EventEmitter<any> = new EventEmitter();
 
@@ -37,7 +38,11 @@ export class NavToolbarComponent implements OnDestroy, OnInit {
 
   ngOnInit(): void {
     this.subscriptions.add(this.windowScrollPositionService.pageOffset.subscribe(
-      response => this.pageOffset = response
+      response => { 
+        this.pageOffset = response 
+        if (response.pageYOffset > 0 ) this.userHasScrolledDown = true;
+        // console.log('--- response:', response)
+      }
     ));
     this.subscriptions.add(this.windowSizeService.windowSize.subscribe(
       response => this.windowSize = response

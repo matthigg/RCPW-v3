@@ -2,14 +2,20 @@
 
   <!-- Logo -->
   <svg [ngClass]="{
-    'expanded': pageOffset.pageYOffset === 0,
+    'expanded': 
+      pageOffset.pageYOffset === 0
+      && userHasScrolledDown === false,
     'rcpw-logo': true
   }">
     <use href="#svg-rcpw-logo-nav"></use>
   </svg>
 
   <!-- Nav Toolbar -->
-  <mat-toolbar [ngClass]="{ 'expanded': pageOffset.pageYOffset === 0 }">
+  <mat-toolbar [ngClass]="{ 
+    'expanded': 
+      pageOffset.pageYOffset === 0
+      && userHasScrolledDown === false
+  }">
     <div class="nav-buttons" *ngIf="windowSize.width >= 768px">
 
       <!-- Phone Number Text -->
