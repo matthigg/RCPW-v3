@@ -70,11 +70,11 @@
         <h4>Select at least one service *</h4>
         <ng-container>
           <mat-selection-list formControlName="services" (selectionChange)="onClickService()">
+            <mat-list-option value="Exterior House Washing">Exterior House Washing</mat-list-option>
+              <mat-list-option value="Concrete & Brick Washing">Concrete & Brick Washing</mat-list-option>
+            <mat-list-option value="Deck & Patio Washing">Deck & Patio Washing</mat-list-option>
+            <mat-list-option value="Deck Sealing & Staining">Deck Sealing & Staining</mat-list-option>
             <mat-list-option value="Fence Cleaning">Fence Cleaning</mat-list-option>
-            <mat-list-option value="Surface Cleaning">Surface Cleaning</mat-list-option>
-            <mat-list-option value="Soft Wash">Soft Wash</mat-list-option>
-            <mat-list-option value="Stain Removal">Stain Removal</mat-list-option>
-            <mat-list-option value="Deck Cleaning">Deck Cleaning</mat-list-option>
           </mat-selection-list>
           <div class="services-error-wrapper">
             <mat-error 
