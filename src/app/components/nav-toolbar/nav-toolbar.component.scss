@@ -16,7 +16,6 @@ nav {
     color: white;
     display: flex;
     justify-content: flex-end;
-    padding-right: 2rem;
     transition: $mat-toolbar-transition;
     & .nav-buttons {
       display: flex;
@@ -52,7 +51,7 @@ nav {
       }
     }
     & .hamburger-icon {
-      background-color: #333;
+      background-color: $quinary-color;
       border: none;
       & .svg-hamburger {
         border: none;
@@ -64,12 +63,18 @@ nav {
         transition: $mat-toolbar-transition;
         &:hover {
           cursor: pointer;
-          stroke: #f3d333;
+          stroke: $tertiary-color;
           transition: $mat-toolbar-transition;
         }
       }
     }
+    @media (max-width: 767.99px) {
+      &.mat-toolbar-single-row {
+        padding: 0;
+      }
+    }
     @media (min-width: 768px) {
+      padding-right: 2rem;
       &.expanded {
         @include quinary-color-rgba-background(0.8);
         height: calc(64px + 1rem);
@@ -111,7 +116,7 @@ nav {
     transition: $mat-toolbar-transition;
     &:hover {
       cursor: pointer;
-      stroke: #f3d333;
+      stroke: $tertiary-color;
       transition: $mat-toolbar-transition;
     }
   }

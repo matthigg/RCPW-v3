@@ -1,8 +1,10 @@
+@import '/src/app/shared/colors';
+
 $button-hover-transition: all 0.2s ease-in;
 
 .footer-buttons-wrapper {
   align-items: center;
-  background-color: #333;
+  background-color: $quinary-color;
   bottom: 0;
   color: #fafafa;
   display: flex;

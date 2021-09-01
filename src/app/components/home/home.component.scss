@@ -59,47 +59,47 @@ mat-toolbar {
     top: calc(2 * 64px);
     width: 35vw;
   }
-  & .mobile-landing-page-text {
-    @include quinary-color-rgba-background(0.8);
-    color: #fafafa;
-    height: max-content;
-    margin-top: calc(56px + 15vh);
-    padding-top: 0.5rem;
-    width: 100%;
-    & h1 {
-      color: #fafafa;
-      margin: 0;
-      text-align: center;
-    }
-    & h2 {
-      color: #fafafa;
-      font-size: 1rem;
-      text-align: center;
-    }
-    & p {
-      padding-left: 1rem;
-    }
-    & ::ng-deep li {
-      color: $off-white;
-      & .svg-email {
-        fill: $off-white !important;
-        @extend %svg-icon-attributes;
-      }
-      & .svg-hours-of-operation {
-        fill: none;
-        stroke: $off-white !important;
-        @extend %svg-icon-attributes;
-      }
-      & .svg-phone {
-        fill: $off-white !important;
-        @extend %svg-icon-attributes;
-      }
-      & .svg-location-marker {
-        fill: $off-white !important;
-        @extend %svg-icon-attributes;
-      }
-    }
-  }
+  // & .mobile-landing-page-text {
+  //   @include quinary-color-rgba-background(0.8);
+  //   color: #fafafa;
+  //   height: max-content;
+  //   margin-top: calc(56px + 15vh);
+  //   padding-top: 0.5rem;
+  //   width: 100%;
+  //   & h1 {
+  //     color: #fafafa;
+  //     margin: 0;
+  //     text-align: center;
+  //   }
+  //   & h2 {
+  //     color: #fafafa;
+  //     font-size: 1rem;
+  //     text-align: center;
+  //   }
+  //   & p {
+  //     padding-left: 1rem;
+  //   }
+  //   & ::ng-deep li {
+  //     color: $off-white;
+  //     & .svg-email {
+  //       fill: $off-white !important;
+  //       @extend %svg-icon-attributes;
+  //     }
+  //     & .svg-hours-of-operation {
+  //       fill: none;
+  //       stroke: $off-white !important;
+  //       @extend %svg-icon-attributes;
+  //     }
+  //     & .svg-phone {
+  //       fill: $off-white !important;
+  //       @extend %svg-icon-attributes;
+  //     }
+  //     & .svg-location-marker {
+  //       fill: $off-white !important;
+  //       @extend %svg-icon-attributes;
+  //     }
+  //   }
+  // }
 }
 
 .section-services {
