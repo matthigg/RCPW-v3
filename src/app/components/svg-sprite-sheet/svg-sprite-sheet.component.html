@@ -99,7 +99,7 @@
       <line x2="55.919" transform="translate(1914.5 1024.5)"/>
       <line x2="55.919" transform="translate(1914.5 1039.5)"/>
       <line x2="55.919" transform="translate(1914.5 1054.5)"/>
-    </g>    
+    </g>
   </symbol>
 
   <!-- RCPW Nav Logo -->
@@ -112,6 +112,9 @@
   </symbol>
 
   <!-- RCPW Circular Logo -->
+  <!-- 9/1/2021 - Note: There's an issue with linear gradients in Chrome -- setting <svg> styles to  -->
+  <!-- include position: fixed; seems to solve the issue. -->
+  <!-- https://stackoverflow.com/questions/32211408/the-svg-use-tag-not-rendering-gradients-firefox -->
   <symbol id="svg-rcpw-logo" viewBox="0 0 322 322">
     <defs>
       <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
