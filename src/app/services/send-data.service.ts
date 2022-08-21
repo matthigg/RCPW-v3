@@ -21,6 +21,11 @@ export class SendDataService {
   constructor(private http: HttpClient) { }
 
   sendData(data: ContactFormData): Observable<any> {
+
+    console.log('--- send-data service:', data)
+    
+    // TODO: the environment.contactFormAPI needs to actually point to something in the
+    // envionment.ts & environment.prod.ts files
     return this.http.post<any>(environment.contactFormAPI, data, this.httpOptions);
   }
 }

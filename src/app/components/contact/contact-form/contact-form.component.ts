@@ -1,5 +1,10 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { UntypedFormBuilder, UntypedFormControl, ValidationErrors, Validators } from '@angular/forms';
+import { 
+  UntypedFormBuilder,
+   UntypedFormControl, 
+   ValidationErrors, 
+   Validators 
+} from '@angular/forms';
 import { Router } from '@angular/router';
 
 // RxJS
@@ -68,7 +73,9 @@ export class ContactFormComponent implements OnDestroy, OnInit {
         !environment.production ? console.log('--- Contact Form API Response:', response) : null;
         this.router.navigate(['thank-you']);
       },
-      error => !environment.production ? console.log('--- Contact Form API Error:', error) : null
+      error => {
+        !environment.production ? console.log('--- Contact Form API Error:', error) : null;
+      }
     ));
   }
 }
