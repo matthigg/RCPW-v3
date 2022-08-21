@@ -1,5 +1,5 @@
 import { AfterViewInit, Component, OnDestroy, OnInit, enableProdMode } from '@angular/core';
-import { FormBuilder, FormControl, FormGroup, Validators, ValidationErrors } from '@angular/forms';
+import { UntypedFormBuilder, UntypedFormControl, UntypedFormGroup, Validators, ValidationErrors } from '@angular/forms';
 import { Router } from '@angular/router';
 
 // Angular Animations
@@ -15,7 +15,7 @@ import { SendDataService } from 'src/app/services/send-data.service';
 import { TrackViewsService } from 'src/app/services/track-views.service';
 
 // Custom Form Validator
-export default function servicesValidator(formControl: FormControl) : ValidationErrors | null {
+export default function servicesValidator(formControl: UntypedFormControl) : ValidationErrors | null {
   return formControl.value.length === 0 ? { 'noSelectedService': true } : null;
 }
 
@@ -52,7 +52,7 @@ export class ContactFormStepperComponent implements AfterViewInit, OnDestroy, On
   private _subscriptions: Subscription = new Subscription();
 
   // Reactive Form, Step 1
-  formGroupStep1: FormGroup;
+  formGroupStep1: UntypedFormGroup;
   get name()            { return this.formGroupStep1.get('name'); }
   get email()           { return this.formGroupStep1.get('email'); }
   get phone()           { return this.formGroupStep1.get('phone'); }
@@ -61,12 +61,12 @@ export class ContactFormStepperComponent implements AfterViewInit, OnDestroy, On
   get typeOfExterior()  { return this.formGroupStep1.get('typeOfExterior'); }
 
   // Reactive Form, Step 2
-  formGroupStep2: FormGroup;
+  formGroupStep2: UntypedFormGroup;
   get services()  { return this.formGroupStep2.get('services'); }
   get message()   { return this.formGroupStep2.get('message'); }
 
   constructor(
-    private _fb: FormBuilder,
+    private _fb: UntypedFormBuilder,
     private _router: Router,
     private _sendDataService: SendDataService,
     public trackViewsService: TrackViewsService,

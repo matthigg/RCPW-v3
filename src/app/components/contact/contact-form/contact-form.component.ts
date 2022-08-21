@@ -1,5 +1,5 @@
 import { Component, OnDestroy, OnInit } from '@angular/core';
-import { FormBuilder, FormControl, ValidationErrors, Validators } from '@angular/forms';
+import { UntypedFormBuilder, UntypedFormControl, ValidationErrors, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 
 // RxJS
@@ -10,7 +10,7 @@ import { environment } from 'src/environments/environment';
 import { SendDataService } from 'src/app/services/send-data.service';
 
 // Custom Form Validator
-export default function servicesValidator(formControl: FormControl) : ValidationErrors | null {
+export default function servicesValidator(formControl: UntypedFormControl) : ValidationErrors | null {
   return formControl.value.length === 0 ? { 'noSelectedService': true } : null;
 }
 
@@ -44,7 +44,7 @@ export class ContactFormComponent implements OnDestroy, OnInit {
   get message()         { return this.contactForm.get('message'); }
 
   constructor(
-    private fb: FormBuilder,
+    private fb: UntypedFormBuilder,
     private router: Router,
     private sendDataService: SendDataService,
   ) { }
