@@ -70,11 +70,15 @@ export class ContactFormComponent implements OnDestroy, OnInit {
   onSubmit(): void {
     this._subscriptions.add(this.sendDataService.sendData(this.contactForm.value).subscribe(
       response => {
-        !environment.production ? console.log('--- Contact Form API Response:', response) : null;
+        !environment.production 
+          ? console.log('--- Contact Form API Response:', response) 
+          : null;
         this.router.navigate(['thank-you']);
       },
       error => {
-        !environment.production ? console.log('--- Contact Form API Error:', error) : null;
+        !environment.production 
+          ? console.log('--- Contact Form API Error:', error) 
+          : null;
       }
     ));
   }

@@ -1,4 +1,12 @@
-<form name="contact-form" [formGroup]="contactForm" (submit)="onSubmit()" netlify>
+<input type="hidden" name="form-name" value="contact-form">
+
+<form name="contact-form" 
+  data-netlify="true"
+  name="contact-form"
+  class="contact-form"
+  [formGroup]="contactForm" 
+  (submit)="onSubmit()" 
+>
   <mat-card>
 
     <!-- Header -->
