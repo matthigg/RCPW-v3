@@ -1,16 +1,36 @@
-<input type="hidden" name="form-name" value="contact-form">
-
+<!-- 
 <form name="contact-form" 
   data-netlify="true"
   name="contact-form"
   class="contact-form"
   [formGroup]="contactForm" 
   (submit)="onSubmit()" 
->
+> -->
 
-  <input type="email" name="email" class="input" />
+<div class="contact">
+  <h2>HEADER</h2>
 
-  <mat-card>
+  <div class="form-box">
+
+    <form name="contact-form" 
+      data-netlify="true"
+      method="POST"
+      name="contact-form"
+      class="contact-form"
+    >
+      <input type="hidden" name="form-name" value="contact-form">
+
+
+      <label> Name: </label>
+      <input type="text" name="name" class="input" />
+
+      <button type="submit"> Submit </button>
+
+    </form>
+  </div>
+</div>
+
+  <!-- <mat-card>
 
     <mat-card-header>
       <mat-card-title>Request a Free Estimate</mat-card-title>
@@ -110,5 +130,5 @@
         Get Your Free Estimate!
       </button>
     </mat-card-actions>
-  </mat-card>
-</form>
+  </mat-card> -->
+<!-- </form> -->
