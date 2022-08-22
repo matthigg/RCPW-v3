@@ -9,37 +9,31 @@
 >
   <mat-card>
 
-    <!-- Header -->
     <mat-card-header>
       <mat-card-title>Request a Free Estimate</mat-card-title>
       <mat-card-subtitle>* indicates a required field</mat-card-subtitle>
     </mat-card-header>
 
-    <!-- Content -->
     <mat-card-content>
 
-      <!-- Name -->
       <mat-form-field class="form-field-name">
         <mat-label>Name</mat-label>
         <input formControlName="name" matInput type="text">
         <mat-error *ngIf="name.errors?.required">Please enter your name</mat-error>
       </mat-form-field>
 
-      <!-- Phone -->
       <mat-form-field class="form-field-phone">
         <mat-label>Phone</mat-label>
         <input formControlName="phone" matInput type="tel">
         <mat-error *ngIf="phone.errors?.required">Please enter your phone number</mat-error>
       </mat-form-field>
 
-      <!-- Address -->
       <mat-form-field class="form-field-address">
         <mat-label>Address</mat-label>
         <input formControlName="address" matInput type="text">
         <mat-error *ngIf="address.errors?.required">Please enter the property address</mat-error>
       </mat-form-field>
 
-      <!-- Email -->
       <mat-form-field class="form-field-email">
         <mat-label>Email</mat-label>
         <input formControlName="email" matInput type="text">
@@ -47,7 +41,6 @@
         <mat-error *ngIf="email.errors?.email">Please enter a valid email address</mat-error>
       </mat-form-field>
 
-      <!-- Number of Stories -->
       <mat-form-field appearance="fill" class="form-field-number-of-stories">
         <mat-label>Number of stories</mat-label>
         <mat-select formControlName="numberOfStories" >
@@ -59,7 +52,6 @@
         <mat-error *ngIf="numberOfStories.errors?.required">Please enter the number of stories</mat-error>
       </mat-form-field>
 
-      <!-- Type of Exterior -->
       <mat-form-field appearance="fill" class="form-field-type-of-exterior">
         <mat-label>Type of exterior</mat-label>
         <mat-select formControlName="typeOfExterior">
@@ -72,7 +64,6 @@
         <mat-error *ngIf="typeOfExterior.errors?.required">Please enter the type of exterior</mat-error>
       </mat-form-field>
 
-      <!-- Services -->
       <div class="services-wrapper">
         <h3>Services</h3>
         <h4>Select at least one service *</h4>
@@ -96,7 +87,6 @@
         </ng-container>
       </div>
 
-      <!-- Message -->
       <mat-form-field appearance="outline" class="form-field-textarea">
         <mat-label>Send us a message</mat-label>
         <textarea formControlName="message" matInput></textarea>
@@ -106,7 +96,6 @@
 
     <div class="spacer"></div>
 
-    <!-- Submit Button -->
     <mat-card-actions>
       <button 
         id="button-get-free-estimate"
