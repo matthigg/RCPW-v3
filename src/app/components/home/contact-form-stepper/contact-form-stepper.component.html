@@ -1,3 +1,19 @@
+<form
+  action="https://formspree.io/f/mpznwleg"
+  method="POST"
+>
+  <label>
+    Your email:
+    <input type="email" name="email">
+  </label>
+  <label>
+    Your message:
+    <textarea name="message"></textarea>
+  </label>
+  <!-- your other form fields go here -->
+  <button type="submit">Send</button>
+</form>
+
 <!-- Contact Form Stepper -->
 <mat-card id="contact-form-stepper-wrapper">
   <div id="contact-form-stepper-header">Request a Free Estimate</div>
@@ -9,15 +25,52 @@
 
     <!-- Step 1 -->
     <mat-step [stepControl]="formGroupStep1">
-      <form [formGroup]="formGroupStep1" (submit)="onSubmit()">
+      <!-- <form 
+        action="https://formspree.io/f/mhh129@gmail.com" 
+        method="POST" 
+        [formGroup]="formGroupStep1" 
+        (submit)="onSubmit()"
+      > -->
+
+      <form 
+        action="https://formspree.io/f/mhh129@gmail.com" 
+        method="POST" 
+        [formGroup]="formGroupStep1"
+        (submit)="onSubmit()"
+      >
+
+
+      <!-- <<form
+        action="https://formspree.io/f/mhh129@gmail.com"
+        method="POST"
+      >
+        <label>
+          Your email:
+          <input type="email" name="email">
+        </label>
+        <label>
+          Your message:
+          <textarea name="message"></textarea>
+        </label> -->
+
+        <!-- your other form fields go here -->
+        <!-- <button type="submit">Send</button>
+      </form> -->
+        
 
         <!-- Hidden Inputs -->
         <input name="name" type="text" id="hidden-name">
+        <input type="submit" value="Send" id="hidden-submit-button">
 
         <!-- Name -->
         <mat-form-field>
           <mat-label>Name</mat-label>
-          <input formControlName="name" matInput type="text">
+          <input 
+            formControlName="name" 
+            matInput 
+            type="text" 
+            (keyup)="updateHiddenInputField(name.value)"
+          >
           <mat-error *ngIf="name.errors?.required">Please enter your name</mat-error>
         </mat-form-field>
 

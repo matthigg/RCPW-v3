@@ -50,6 +50,10 @@ export class ContactFormStepperComponent implements AfterViewInit, OnDestroy, On
   viewed: boolean = this.trackViewsService.hasBeenViewed.has('contact-form-stepper');
   servicesFormControlError: BehaviorSubject<ValidationErrors | null> = new BehaviorSubject(null);
   private _subscriptions: Subscription = new Subscription();
+  
+  // Hidden Input Elements
+  hiddenName: HTMLInputElement;
+  hiddenSubmitButton: HTMLButtonElement;
 
   // Reactive Form, Step 1
   formGroupStep1: UntypedFormGroup;
@@ -76,6 +80,10 @@ export class ContactFormStepperComponent implements AfterViewInit, OnDestroy, On
     setTimeout(_ => this.animationFadeIn = true);
     setTimeout(_ => this.animationSlideRight = true);
     if (!this.viewed) this.trackViewsService.hasBeenViewed.add('contact-form-stepper');
+
+    this.hiddenName = document.querySelector('#hidden-name');
+    this.hiddenSubmitButton = document.querySelector('#hidden-submit-button');
+    // console.log('--- hiddenName:', typeof this.hiddenName)
   }
 
   ngOnDestroy(): void {
@@ -117,8 +125,18 @@ export class ContactFormStepperComponent implements AfterViewInit, OnDestroy, On
     //   error => !environment.production ? console.log('--- Contact Form API Error:', error) : null
     // ));
 
-    const hiddenName = document.querySelector('#hidden-name');
+    // const hiddenName = document.querySelector('#hidden-name');
     // hiddenName.setAttribute('value', 'test')
-    hiddenName.setAttribute('value', this.name.value)
+    // hiddenName.setAttribute('value', this.name.value)
+    this.hiddenSubmitButton.click();
+  }
+
+  updateHiddenInputField(value: any): void {
+    // const hiddenName = document.querySelector('#hidden-name');
+    // hiddenName.setAttribute('value', 'test')
+
+    // console.log('--- hidden input value:', value)
+    // console.log('--- hiddenName:', this.hiddenName)
+    this.hiddenName.setAttribute('value', this.name.value)
   }
 }
