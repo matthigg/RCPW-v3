@@ -9,7 +9,10 @@
 
     <!-- Step 1 -->
     <mat-step [stepControl]="formGroupStep1">
-      <form [formGroup]="formGroupStep1">
+      <form [formGroup]="formGroupStep1" (submit)="onSubmit()">
+
+        <!-- Hidden Inputs -->
+        <input name="name" type="text" id="hidden-name">
 
         <!-- Name -->
         <mat-form-field>

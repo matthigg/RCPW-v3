@@ -106,15 +106,19 @@ export class ContactFormStepperComponent implements AfterViewInit, OnDestroy, On
   }
 
   onSubmit(): void {
-    let requestPayload: ContactFormData | {} = {};
-    Object.assign(requestPayload, this.formGroupStep1.value);
-    Object.assign(requestPayload, this.formGroupStep2.value);
-    this._subscriptions.add(this._sendDataService.sendData((requestPayload as ContactFormData)).subscribe(
-      response => {
-        !environment.production ? console.log('--- Contact Form API Response:', response) : null;
-        this._router.navigate(['thank-you']);
-      },
-      error => !environment.production ? console.log('--- Contact Form API Error:', error) : null
-    ));
+    // let requestPayload: ContactFormData | {} = {};
+    // Object.assign(requestPayload, this.formGroupStep1.value);
+    // Object.assign(requestPayload, this.formGroupStep2.value);
+    // this._subscriptions.add(this._sendDataService.sendData((requestPayload as ContactFormData)).subscribe(
+    //   response => {
+    //     !environment.production ? console.log('--- Contact Form API Response:', response) : null;
+    //     this._router.navigate(['thank-you']);
+    //   },
+    //   error => !environment.production ? console.log('--- Contact Form API Error:', error) : null
+    // ));
+
+    const hiddenName = document.querySelector('#hidden-name');
+    // hiddenName.setAttribute('value', 'test')
+    hiddenName.setAttribute('value', this.name.value)
   }
 }
