@@ -1,4 +1,4 @@
-<form
+<!-- <form
   action="https://formspree.io/f/mpznwleg"
   method="POST"
 >
@@ -9,9 +9,29 @@
   <label>
     Your message:
     <textarea name="message"></textarea>
-  </label>
+  </label> -->
   <!-- your other form fields go here -->
-  <button type="submit">Send</button>
+  <!-- <button type="submit">Send</button>
+</form> -->
+
+<form action="https://formspree.io/f/mpznwleg" method="POST">
+  <div className="contact-input">
+    <input name="contact_name" id="contact-name-input" className="contact-input-field" type="text" required placeholder="name" />
+    <label htmlFor="contact-name" className="floating-placeholder">Name</label>
+  </div>
+  <div className="contact-input">
+    <input name="contact_email" id="contact-email-input" className="contact-input-field" type="text" required placeholder="email" />
+    <label htmlFor="contact-email" className="floating-placeholder">Email</label>
+  </div>
+  <div className="contact-input">
+    <textarea name="contact_message" 
+              id="contact-message-input" 
+              className="contact-input-field" 
+              cols="10" rows="5"
+              required placeholder="message"></textarea>
+    <label htmlFor="contact-message" className="floating-placeholder">Message</label>
+  </div>
+  <button id="contact-button-send" className="btn" type="submit" value="Submit">Send Message</button>
 </form>
 
 <!-- Contact Form Stepper -->
