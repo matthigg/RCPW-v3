@@ -1,40 +1,3 @@
-<!-- <form
-  action="https://formspree.io/f/mpznwleg"
-  method="POST"
->
-  <label>
-    Your email:
-    <input type="email" name="email">
-  </label>
-  <label>
-    Your message:
-    <textarea name="message"></textarea>
-  </label> -->
-  <!-- your other form fields go here -->
-  <!-- <button type="submit">Send</button>
-</form> -->
-
-<!-- <form action="https://formspree.io/f/mpznwleg" method="POST"> -->
-  <form action="https://formspree.io/mhh129@gmail.com" method="POST">
-  <div className="contact-input">
-    <input name="contact_name" id="contact-name-input" className="contact-input-field" type="text" required placeholder="name" />
-    <label htmlFor="contact-name" className="floating-placeholder">Name</label>
-  </div>
-  <div className="contact-input">
-    <input name="contact_email" id="contact-email-input" className="contact-input-field" type="text" required placeholder="email" />
-    <label htmlFor="contact-email" className="floating-placeholder">Email</label>
-  </div>
-  <div className="contact-input">
-    <textarea name="contact_message" 
-              id="contact-message-input" 
-              className="contact-input-field" 
-              cols="10" rows="5"
-              required placeholder="message"></textarea>
-    <label htmlFor="contact-message" className="floating-placeholder">Message</label>
-  </div>
-  <button id="contact-button-send" className="btn" type="submit" value="Submit">Send Message</button>
-</form>
-
 <!-- Contact Form Stepper -->
 <mat-card id="contact-form-stepper-wrapper">
   <div id="contact-form-stepper-header">Request a Free Estimate</div>
@@ -46,52 +9,12 @@
 
     <!-- Step 1 -->
     <mat-step [stepControl]="formGroupStep1">
-      <!-- <form 
-        action="https://formspree.io/f/mhh129@gmail.com" 
-        method="POST" 
-        [formGroup]="formGroupStep1" 
-        (submit)="onSubmit()"
-      > -->
-
-      <form 
-        action="https://formspree.io/f/mhh129@gmail.com" 
-        method="POST" 
-        [formGroup]="formGroupStep1"
-        (submit)="onSubmit()"
-      >
-
-
-      <!-- <<form
-        action="https://formspree.io/f/mhh129@gmail.com"
-        method="POST"
-      >
-        <label>
-          Your email:
-          <input type="email" name="email">
-        </label>
-        <label>
-          Your message:
-          <textarea name="message"></textarea>
-        </label> -->
-
-        <!-- your other form fields go here -->
-        <!-- <button type="submit">Send</button>
-      </form> -->
-        
-
-        <!-- Hidden Inputs -->
-        <input name="name" type="text" id="hidden-name">
-        <input type="submit" value="Send" id="hidden-submit-button">
+      <form [formGroup]="formGroupStep1">
 
         <!-- Name -->
         <mat-form-field>
           <mat-label>Name</mat-label>
-          <input 
-            formControlName="name" 
-            matInput 
-            type="text" 
-            (keyup)="updateHiddenInputField(name.value)"
-          >
+          <input formControlName="name" matInput type="text">
           <mat-error *ngIf="name.errors?.required">Please enter your name</mat-error>
         </mat-form-field>
 
