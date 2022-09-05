@@ -1,3 +1,24 @@
+<form
+  action="https://formspree.io/f/mpznwleg"
+  method="POST"
+  #form
+>
+  <label>
+    Your name:
+    <input id="hidden-name" name="name" type="text">
+  </label>
+  <label>
+    Your email:
+    <input name="email" type="email">
+  </label>
+  <label>
+    Your message:
+    <textarea name="message"></textarea>
+  </label>
+  <!-- your other form fields go here -->
+  <button type="submit" (click)="form.submit()">Send</button>
+</form>
+
 <!-- Contact Form Stepper -->
 <mat-card id="contact-form-stepper-wrapper">
   <div id="contact-form-stepper-header">Request a Free Estimate</div>
@@ -14,7 +35,12 @@
         <!-- Name -->
         <mat-form-field>
           <mat-label>Name</mat-label>
-          <input formControlName="name" matInput type="text">
+          <input 
+            formControlName="name" 
+            matInput 
+            type="text" 
+            (keyup)="updateHiddenNameInputField()"
+          >
           <mat-error *ngIf="name.errors?.required">Please enter your name</mat-error>
         </mat-form-field>
 

@@ -84,6 +84,7 @@ export class ContactFormStepperComponent implements AfterViewInit, OnDestroy, On
     this.hiddenName = document.querySelector('#hidden-name');
     this.hiddenSubmitButton = document.querySelector('#hidden-submit-button');
     // console.log('--- hiddenName:', typeof this.hiddenName)
+    console.log('--- afterViewInit hiddenName:', this.hiddenName)
   }
 
   ngOnDestroy(): void {
@@ -131,12 +132,16 @@ export class ContactFormStepperComponent implements AfterViewInit, OnDestroy, On
     this.hiddenSubmitButton.click();
   }
 
-  updateHiddenInputField(value: any): void {
+  // updateHiddenInputField(value: any): void {
+  updateHiddenNameInputField(): void {
     // const hiddenName = document.querySelector('#hidden-name');
     // hiddenName.setAttribute('value', 'test')
 
     // console.log('--- hidden input value:', value)
     // console.log('--- hiddenName:', this.hiddenName)
+
+    // This sets the hidden name <input> element to this.name via the getter for the
+    // name field in formGroupStep1
     this.hiddenName.setAttribute('value', this.name.value)
   }
 }
