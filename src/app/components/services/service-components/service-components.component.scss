@@ -29,6 +29,7 @@ $s3-bucket: 'https://rns-static-and-media-files.s3.amazonaws.com/static';
 
 // Surface Cleaning
 .card-background-exterior-house-washing.show-image {
+  background-image: url('../../../../assets/images/thumbnail-exterior-house-washing-01.jpg');
   // @media (min-width: 0px) {
   //   background-image:                   url('#{$s3-bucket}/#{$surface-cleaning-140kb}/1x-surface-cleaning-01-320.jpg');
   //   background-image: -webkit-image-set(url('#{$s3-bucket}/#{$surface-cleaning-140kb}/1x-surface-cleaning-01-320.webp') 1x, url('#{$s3-bucket}/#{$surface-cleaning-140kb}/2x-surface-cleaning-01-320.webp') 2x);  
