@@ -30,13 +30,13 @@ export class ContactFormComponent implements OnDestroy, OnInit {
 
   // Hidden Input Elements
   hiddenName: HTMLInputElement;
-  // hiddenPhone: HTMLInputElement;
-  // hiddenAddress: HTMLInputElement;
-  // hiddenEmail: HTMLInputElement;
-  // hiddenNumberOfStories: HTMLInputElement;
-  // hiddenTypeOfExterior: HTMLInputElement;
-  // hiddenServices: HTMLInputElement;
-  // hiddenMessage: HTMLInputElement;
+  hiddenPhone: HTMLInputElement;
+  hiddenAddress: HTMLInputElement;
+  hiddenEmail: HTMLInputElement;
+  hiddenNumberOfStories: HTMLInputElement;
+  hiddenTypeOfExterior: HTMLInputElement;
+  hiddenServices: HTMLInputElement;
+  hiddenMessage: HTMLInputElement;
   hiddenSubmitButton: HTMLButtonElement;
   
   // Reactive FormGroup
@@ -73,13 +73,13 @@ export class ContactFormComponent implements OnDestroy, OnInit {
     // if (!this.viewed) this.trackViewsService.hasBeenViewed.add('contact-form-stepper');
 
     this.hiddenName = document.querySelector('#hidden-name');
-    // this.hiddenPhone = document.querySelector('#hidden-phone');
-    // this.hiddenAddress = document.querySelector('#hidden-address');
-    // this.hiddenEmail = document.querySelector('#hidden-email');
-    // this.hiddenNumberOfStories = document.querySelector('#hidden-number-of-stories');
-    // this.hiddenTypeOfExterior = document.querySelector('#hidden-type-of-exterior');
-    // this.hiddenServices = document.querySelector('#hidden-services');
-    // this.hiddenMessage = document.querySelector('#hidden-message');
+    this.hiddenPhone = document.querySelector('#hidden-phone');
+    this.hiddenAddress = document.querySelector('#hidden-address');
+    this.hiddenEmail = document.querySelector('#hidden-email');
+    this.hiddenNumberOfStories = document.querySelector('#hidden-number-of-stories');
+    this.hiddenTypeOfExterior = document.querySelector('#hidden-type-of-exterior');
+    this.hiddenServices = document.querySelector('#hidden-services');
+    this.hiddenMessage = document.querySelector('#hidden-message');
     this.hiddenSubmitButton = document.querySelector('#hidden-submit-button');
   }
   
@@ -117,6 +117,35 @@ export class ContactFormComponent implements OnDestroy, OnInit {
   }
 
   updateHiddenNameInputField(): void {
+    console.log('-asfdasdfasf')
     this.hiddenName.setAttribute('value', this.name.value)
+  }
+
+  updateHiddenPhoneInputField(): void {
+    this.hiddenPhone.setAttribute('value', this.phone.value)
+  }
+
+  updateHiddenAddressInputField(): void {
+    this.hiddenAddress.setAttribute('value', this.address.value)
+  }
+
+  updateHiddenEmailInputField(): void {
+    this.hiddenEmail.setAttribute('value', this.email.value)
+  }
+
+  updateHiddenNumberOfStoriesInputField(): void {
+    this.hiddenNumberOfStories.setAttribute('value', this.numberOfStories.value)
+  }
+
+  updateHiddenTypeOfExteriorInputField(): void {
+    this.hiddenTypeOfExterior.setAttribute('value', this.typeOfExterior.value)
+  }
+
+  updateHiddenServiceInputField(): void {
+    this.hiddenServices.setAttribute('value', this.services.value)
+  }
+
+  updateHiddenMessageInputField(): void {
+    this.hiddenMessage.setAttribute('value', this.message.value)
   }
 }

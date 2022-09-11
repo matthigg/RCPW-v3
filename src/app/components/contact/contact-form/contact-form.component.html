@@ -12,7 +12,7 @@
   <input id="hidden-type-of-exterior" name="type-of-exterior" type="text">
   <input id="hidden-services" name="services" type="text">
   <input id="hidden-message" name="message" type="text">
-  <button type="submit" (click)="form.submit()">Send</button>
+  <button id="hidden-submit-button" type="submit" (click)="form.submit()">Send</button>
 </form>
 
 <form name="contact-form" [formGroup]="contactForm" (submit)="onSubmit()">
@@ -43,21 +43,36 @@
       <!-- Phone -->
       <mat-form-field class="form-field-phone">
         <mat-label>Phone</mat-label>
-        <input formControlName="phone" matInput type="tel">
+        <input 
+          formControlName="phone" 
+          matInput 
+          type="tel"
+          (keyup)="updateHiddenPhoneInputField()"
+        >
         <mat-error *ngIf="phone.errors?.required">Please enter your phone number</mat-error>
       </mat-form-field>
 
       <!-- Address -->
       <mat-form-field class="form-field-address">
         <mat-label>Address</mat-label>
-        <input formControlName="address" matInput type="text">
+        <input 
+          formControlName="address" 
+          matInput 
+          type="text"
+          (keyup)="updateHiddenAddressInputField()"
+        >
         <mat-error *ngIf="address.errors?.required">Please enter the property address</mat-error>
       </mat-form-field>
 
       <!-- Email -->
       <mat-form-field class="form-field-email">
         <mat-label>Email</mat-label>
-        <input formControlName="email" matInput type="text">
+        <input 
+          formControlName="email" 
+          matInput 
+          type="text"
+          (keyup)="updateHiddenEmailInputField()"
+        >
         <mat-error *ngIf="email.errors?.required">Please enter an email address</mat-error>
         <mat-error *ngIf="email.errors?.email">Please enter a valid email address</mat-error>
       </mat-form-field>
@@ -65,7 +80,10 @@
       <!-- Number of Stories -->
       <mat-form-field appearance="fill" class="form-field-number-of-stories">
         <mat-label>Number of stories</mat-label>
-        <mat-select formControlName="numberOfStories" >
+        <mat-select 
+          formControlName="numberOfStories" 
+          (selectionChange)="updateHiddenNumberOfStoriesInputField()"
+        >
           <mat-option value="1">1</mat-option>
           <mat-option value="2">2</mat-option>
           <mat-option value="3">3</mat-option>
@@ -77,7 +95,10 @@
       <!-- Type of Exterior -->
       <mat-form-field appearance="fill" class="form-field-type-of-exterior">
         <mat-label>Type of exterior</mat-label>
-        <mat-select formControlName="typeOfExterior">
+        <mat-select 
+          formControlName="typeOfExterior"
+          (selectionChange)="updateHiddenTypeOfExteriorInputField()"
+        >
           <mat-option value="Vinyl">Vinyl</mat-option>
           <mat-option value="Wood">Wood</mat-option>
           <mat-option value="Brick">Brick</mat-option>
@@ -92,7 +113,10 @@
         <h3>Services</h3>
         <h4>Select at least one service *</h4>
         <ng-container>
-          <mat-selection-list formControlName="services" (selectionChange)="onClickService()">
+          <mat-selection-list 
+            formControlName="services" 
+            (selectionChange)="onClickService(); updateHiddenServiceInputField()"
+          >
             <mat-list-option value="Exterior House Washing">Exterior House Washing</mat-list-option>
               <mat-list-option value="Concrete & Brick Washing">Concrete & Brick Washing</mat-list-option>
             <mat-list-option value="Deck & Patio Washing">Deck & Patio Washing</mat-list-option>
@@ -114,7 +138,11 @@
       <!-- Message -->
       <mat-form-field appearance="outline" class="form-field-textarea">
         <mat-label>Send us a message</mat-label>
-        <textarea formControlName="message" matInput></textarea>
+        <textarea 
+          formControlName="message" 
+          matInput
+          (keyup)="updateHiddenMessageInputField()"
+        ></textarea>
         <mat-error *ngIf="message.errors?.required">Please enter a message</mat-error>
       </mat-form-field>
     </mat-card-content>

@@ -102,15 +102,15 @@ export class ContactFormStepperComponent implements AfterViewInit, OnDestroy, On
     setTimeout(_ => this.animationSlideRight = true);
     if (!this.viewed) this.trackViewsService.hasBeenViewed.add('contact-form-stepper');
 
-    this.hiddenName = document.querySelector('#hidden-name');
-    this.hiddenPhone = document.querySelector('#hidden-phone');
-    this.hiddenAddress = document.querySelector('#hidden-address');
-    this.hiddenEmail = document.querySelector('#hidden-email');
-    this.hiddenNumberOfStories = document.querySelector('#hidden-number-of-stories');
-    this.hiddenTypeOfExterior = document.querySelector('#hidden-type-of-exterior');
-    this.hiddenServices = document.querySelector('#hidden-services');
-    this.hiddenMessage = document.querySelector('#hidden-message');
-    this.hiddenSubmitButton = document.querySelector('#hidden-submit-button');
+    this.hiddenName = document.querySelector('#contact-form-stepper-hidden-name');
+    this.hiddenPhone = document.querySelector('#contact-form-stepper-hidden-phone');
+    this.hiddenAddress = document.querySelector('#contact-form-stepper-hidden-address');
+    this.hiddenEmail = document.querySelector('#contact-form-stepper-hidden-email');
+    this.hiddenNumberOfStories = document.querySelector('#contact-form-stepper-hidden-number-of-stories');
+    this.hiddenTypeOfExterior = document.querySelector('#contact-form-stepper-hidden-type-of-exterior');
+    this.hiddenServices = document.querySelector('#contact-form-stepper-hidden-services');
+    this.hiddenMessage = document.querySelector('#contact-form-stepper-hidden-message');
+    this.hiddenSubmitButton = document.querySelector('#contact-form-stepper-hidden-submit-button');
   }
 
   ngOnDestroy(): void {
