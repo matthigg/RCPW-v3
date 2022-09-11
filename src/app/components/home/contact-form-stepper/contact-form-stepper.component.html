@@ -8,12 +8,24 @@
     <input id="hidden-name" name="name" type="text">
   </label>
   <label>
+    Your phone:
+    <input id="hidden-phone" name="phone" type="text">
+  </label>
+  <label>
+    Your address:
+    <input id="hidden-address" name="address" type="text">
+  </label>
+  <label>
     Your email:
-    <input name="email" type="email">
+    <input id="hidden-email" name="email" type="email">
+  </label>
+  <label>
+    Number of stories:
+    <input id="hidden-number-of-stories" name="number-of-stories" type="text">
   </label>
   <label>
     Your message:
-    <textarea name="message"></textarea>
+    <textarea id="hidden-message" name="message"></textarea>
   </label>
   <!-- your other form fields go here -->
   <button type="submit" (click)="form.submit()">Send</button>
@@ -47,21 +59,36 @@
         <!-- Phone -->
         <mat-form-field>
           <mat-label>Phone</mat-label>
-          <input formControlName="phone" matInput type="tel">
+          <input 
+            formControlName="phone" 
+            matInput 
+            type="tel"
+            (keyup)="updateHiddenPhoneInputField()"
+          >
           <mat-error *ngIf="phone.errors?.required">Please enter your phone number</mat-error>
         </mat-form-field>
 
         <!-- Address -->
         <mat-form-field>
           <mat-label>Address</mat-label>
-          <input formControlName="address" matInput type="text">
+          <input 
+            formControlName="address" 
+            matInput 
+            type="text"
+            (keyup)="updateHiddenAddressInputField()"
+          >
           <mat-error *ngIf="address.errors?.required">Please enter the property address</mat-error>
         </mat-form-field>
 
         <!-- Email -->
         <mat-form-field>
           <mat-label>Email</mat-label>
-          <input formControlName="email" matInput type="text">
+          <input 
+            formControlName="email" 
+            matInput 
+            type="text"
+            (keyup)="updateHiddenEmailInputField()"
+          >
           <mat-error *ngIf="email.errors?.required">Please enter an email address</mat-error>
           <mat-error *ngIf="email.errors?.email">Please enter a valid email address</mat-error>
         </mat-form-field>
@@ -69,7 +96,10 @@
         <!-- Number of Stories -->
         <mat-form-field appearance="fill">
           <mat-label>Number of stories</mat-label>
-          <mat-select formControlName="numberOfStories" >
+          <mat-select 
+            formControlName="numberOfStories" 
+            (selectionChange)="updateHiddenNumberOfStoriesInputField()"
+          >
             <mat-option value="1">1</mat-option>
             <mat-option value="2">2</mat-option>
             <mat-option value="3">3</mat-option>

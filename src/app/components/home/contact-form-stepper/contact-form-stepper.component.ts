@@ -53,6 +53,10 @@ export class ContactFormStepperComponent implements AfterViewInit, OnDestroy, On
   
   // Hidden Input Elements
   hiddenName: HTMLInputElement;
+  hiddenPhone: HTMLInputElement;
+  hiddenAddress: HTMLInputElement;
+  hiddenEmail: HTMLInputElement;
+  hiddenNumberOfStories: HTMLInputElement;
   hiddenSubmitButton: HTMLButtonElement;
 
   // Reactive Form, Step 1
@@ -82,9 +86,14 @@ export class ContactFormStepperComponent implements AfterViewInit, OnDestroy, On
     if (!this.viewed) this.trackViewsService.hasBeenViewed.add('contact-form-stepper');
 
     this.hiddenName = document.querySelector('#hidden-name');
+    this.hiddenPhone = document.querySelector('#hidden-phone');
+    this.hiddenAddress = document.querySelector('#hidden-address');
+    this.hiddenEmail = document.querySelector('#hidden-email');
+    this.hiddenNumberOfStories = document.querySelector('#hidden-number-of-stories');
     this.hiddenSubmitButton = document.querySelector('#hidden-submit-button');
+
     // console.log('--- hiddenName:', typeof this.hiddenName)
-    console.log('--- afterViewInit hiddenName:', this.hiddenName)
+    // console.log('--- afterViewInit hiddenName:', this.hiddenName)
   }
 
   ngOnDestroy(): void {
@@ -115,33 +124,26 @@ export class ContactFormStepperComponent implements AfterViewInit, OnDestroy, On
   }
 
   onSubmit(): void {
-    // let requestPayload: ContactFormData | {} = {};
-    // Object.assign(requestPayload, this.formGroupStep1.value);
-    // Object.assign(requestPayload, this.formGroupStep2.value);
-    // this._subscriptions.add(this._sendDataService.sendData((requestPayload as ContactFormData)).subscribe(
-    //   response => {
-    //     !environment.production ? console.log('--- Contact Form API Response:', response) : null;
-    //     this._router.navigate(['thank-you']);
-    //   },
-    //   error => !environment.production ? console.log('--- Contact Form API Error:', error) : null
-    // ));
-
-    // const hiddenName = document.querySelector('#hidden-name');
-    // hiddenName.setAttribute('value', 'test')
-    // hiddenName.setAttribute('value', this.name.value)
     this.hiddenSubmitButton.click();
   }
 
-  // updateHiddenInputField(value: any): void {
   updateHiddenNameInputField(): void {
-    // const hiddenName = document.querySelector('#hidden-name');
-    // hiddenName.setAttribute('value', 'test')
-
-    // console.log('--- hidden input value:', value)
-    // console.log('--- hiddenName:', this.hiddenName)
-
-    // This sets the hidden name <input> element to this.name via the getter for the
-    // name field in formGroupStep1
     this.hiddenName.setAttribute('value', this.name.value)
+  }
+
+  updateHiddenPhoneInputField(): void {
+    this.hiddenPhone.setAttribute('value', this.phone.value)
+  }
+
+  updateHiddenAddressInputField(): void {
+    this.hiddenAddress.setAttribute('value', this.address.value)
+  }
+
+  updateHiddenEmailInputField(): void {
+    this.hiddenEmail.setAttribute('value', this.email.value)
+  }
+
+  updateHiddenNumberOfStoriesInputField(): void {
+    this.hiddenNumberOfStories.setAttribute('value', this.numberOfStories.value)
   }
 }
