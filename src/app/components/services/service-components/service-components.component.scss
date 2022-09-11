@@ -10,6 +10,7 @@ $s3-bucket: 'https://rns-static-and-media-files.s3.amazonaws.com/static';
 
 // Fence Cleaning
 .card-background-fence-cleaning.show-image {
+  background-image: url('../../../../assets/images/thumbnail-fence-cleaning-01.jpg');
   // @media (min-width: 0px) {
   //   background-image:                   url('#{$s3-bucket}/#{$fence-cleaning-140kb}/1x-fence-cleaning-01-320.jpg');
   //   background-image: -webkit-image-set(url('#{$s3-bucket}/#{$fence-cleaning-140kb}/1x-fence-cleaning-01-320.webp') 1x, url('#{$s3-bucket}/#{$fence-cleaning-140kb}/2x-fence-cleaning-01-320.webp') 2x);  
@@ -88,7 +89,9 @@ $s3-bucket: 'https://rns-static-and-media-files.s3.amazonaws.com/static';
 }
 
 // Deck Cleaning & Restoration
-.card-background-deck-cleaning-and-restoration.show-image {
+.card-background-deck-sealing-and-staining.show-image {
+  // background-image: url('../../../../assets/images/thumbnail-thumbnail-deck-sealing-and-staining-01.jpg');
+  background-image: url('../../../../assets/images/thumbnail-deck-sealing-and-staining-01.jpg');
   // @media (min-width: 0px) {
   //   background-image:                   url('#{$s3-bucket}/#{$deck-cleaning-and-restoration-140kb}/1x-deck-cleaning-and-restoration-01-320.jpg');
   //   background-image: -webkit-image-set(url('#{$s3-bucket}/#{$deck-cleaning-and-restoration-140kb}/1x-deck-cleaning-and-restoration-01-320.webp') 1x, url('#{$s3-bucket}/#{$deck-cleaning-and-restoration-140kb}/2x-deck-cleaning-and-restoration-01-320.webp') 2x);  
