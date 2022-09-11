@@ -58,6 +58,10 @@
   }
 }
 
+form.hidden-form {
+  display: none;
+}
+
 ::ng-deep #contact-form-stepper {
   & .mat-horizontal-stepper-header-container {
     display: none;

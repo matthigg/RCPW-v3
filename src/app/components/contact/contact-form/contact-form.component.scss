@@ -1,5 +1,10 @@
 @import '/src/app/shared/colors';
 
+
+form.hidden-form {
+  display: none;
+}
+
 mat-card {
   border: 1px solid $quinary-color;
   & mat-card-actions {
