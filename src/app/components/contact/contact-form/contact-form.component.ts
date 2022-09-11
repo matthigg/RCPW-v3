@@ -68,10 +68,6 @@ export class ContactFormComponent implements OnDestroy, OnInit {
   ) { }
 
   ngAfterViewInit(): void {
-    // setTimeout(_ => this.animationFadeIn = true);
-    // setTimeout(_ => this.animationSlideRight = true);
-    // if (!this.viewed) this.trackViewsService.hasBeenViewed.add('contact-form-stepper');
-
     this.hiddenName = document.querySelector('#hidden-name');
     this.hiddenPhone = document.querySelector('#hidden-phone');
     this.hiddenAddress = document.querySelector('#hidden-address');
