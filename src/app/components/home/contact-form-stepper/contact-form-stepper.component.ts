@@ -57,6 +57,9 @@ export class ContactFormStepperComponent implements AfterViewInit, OnDestroy, On
   hiddenAddress: HTMLInputElement;
   hiddenEmail: HTMLInputElement;
   hiddenNumberOfStories: HTMLInputElement;
+  hiddenTypeOfExterior: HTMLInputElement;
+  hiddenServices: HTMLInputElement;
+  hiddenMessage: HTMLInputElement;
   hiddenSubmitButton: HTMLButtonElement;
 
   // Reactive Form, Step 1
@@ -90,10 +93,15 @@ export class ContactFormStepperComponent implements AfterViewInit, OnDestroy, On
     this.hiddenAddress = document.querySelector('#hidden-address');
     this.hiddenEmail = document.querySelector('#hidden-email');
     this.hiddenNumberOfStories = document.querySelector('#hidden-number-of-stories');
+    this.hiddenTypeOfExterior = document.querySelector('#hidden-type-of-exterior');
+    this.hiddenServices = document.querySelector('#hidden-services');
+    this.hiddenMessage = document.querySelector('#hidden-message');
     this.hiddenSubmitButton = document.querySelector('#hidden-submit-button');
 
     // console.log('--- hiddenName:', typeof this.hiddenName)
     // console.log('--- afterViewInit hiddenName:', this.hiddenName)
+
+    console.log('--- hiddenMessage:', this.hiddenMessage)
   }
 
   ngOnDestroy(): void {
@@ -145,5 +153,17 @@ export class ContactFormStepperComponent implements AfterViewInit, OnDestroy, On
 
   updateHiddenNumberOfStoriesInputField(): void {
     this.hiddenNumberOfStories.setAttribute('value', this.numberOfStories.value)
+  }
+
+  updateHiddenTypeOfExteriorInputField(): void {
+    this.hiddenTypeOfExterior.setAttribute('value', this.typeOfExterior.value)
+  }
+
+  updateHiddenServiceInputField(): void {
+    this.hiddenServices.setAttribute('value', this.services.value)
+  }
+
+  updateHiddenMessageInputField(): void {
+    this.hiddenMessage.setAttribute('value', this.message.value)
   }
 }

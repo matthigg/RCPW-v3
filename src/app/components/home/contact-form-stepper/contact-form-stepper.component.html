@@ -24,8 +24,21 @@
     <input id="hidden-number-of-stories" name="number-of-stories" type="text">
   </label>
   <label>
+    Type of exterior:
+    <input id="hidden-type-of-exterior" name="type-of-exterior" type="text">
+  </label>
+  <label>
+    Services:
+    <input id="hidden-services" name="services" type="text">
+  </label>
+  <!-- <label>
+    Message:
+    <input id="hidden-message" name="message" type="text">
+  </label> -->
+  <label>
     Your message:
-    <textarea id="hidden-message" name="message"></textarea>
+    <!-- <textarea id="hidden-message" name="message"></textarea> -->
+    <input id="hidden-message" name="message" type="text">
   </label>
   <!-- your other form fields go here -->
   <button type="submit" (click)="form.submit()">Send</button>
@@ -111,7 +124,10 @@
         <!-- Type of Exterior -->
         <mat-form-field appearance="fill">
           <mat-label>Type of exterior</mat-label>
-          <mat-select formControlName="typeOfExterior">
+          <mat-select 
+            formControlName="typeOfExterior"
+            (selectionChange)="updateHiddenTypeOfExteriorInputField()"
+          >
             <mat-option value="Vinyl">Vinyl</mat-option>
             <mat-option value="Wood">Wood</mat-option>
             <mat-option value="Brick">Brick</mat-option>
@@ -135,7 +151,10 @@
         <!-- Services -->
         <div class="services-wrapper">
           <ng-container>
-            <mat-selection-list formControlName="services" (selectionChange)="onClickService()">
+            <mat-selection-list 
+              formControlName="services" 
+              (selectionChange)="onClickService(); updateHiddenServiceInputField()"
+            >
               <mat-list-option value="Exterior House Washing">Exterior House Washing</mat-list-option>
               <mat-list-option value="Concrete & Brick Washing">Concrete & Brick Washing</mat-list-option>
               <mat-list-option value="Deck & Patio Washing">Deck & Patio Washing</mat-list-option>
@@ -157,7 +176,11 @@
         <!-- Message -->
         <mat-form-field appearance="outline">
           <mat-label>Send us a message</mat-label>
-          <textarea formControlName="message" matInput></textarea>
+          <textarea 
+            formControlName="message" 
+            matInput
+            (keyup)="updateHiddenMessageInputField()"
+          ></textarea>
           <mat-error *ngIf="message.errors?.required">Please enter a message</mat-error>
         </mat-form-field>
 
