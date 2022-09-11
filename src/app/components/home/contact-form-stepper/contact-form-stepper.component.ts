@@ -97,11 +97,6 @@ export class ContactFormStepperComponent implements AfterViewInit, OnDestroy, On
     this.hiddenServices = document.querySelector('#hidden-services');
     this.hiddenMessage = document.querySelector('#hidden-message');
     this.hiddenSubmitButton = document.querySelector('#hidden-submit-button');
-
-    // console.log('--- hiddenName:', typeof this.hiddenName)
-    // console.log('--- afterViewInit hiddenName:', this.hiddenName)
-
-    console.log('--- hiddenMessage:', this.hiddenMessage)
   }
 
   ngOnDestroy(): void {

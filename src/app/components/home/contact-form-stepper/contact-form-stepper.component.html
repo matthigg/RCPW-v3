@@ -1,46 +1,17 @@
+<!-- FormSpree -->
 <form
   action="https://formspree.io/f/mpznwleg"
   method="POST"
   #form
->
-  <label>
-    Your name:
-    <input id="hidden-name" name="name" type="text">
-  </label>
-  <label>
-    Your phone:
-    <input id="hidden-phone" name="phone" type="text">
-  </label>
-  <label>
-    Your address:
-    <input id="hidden-address" name="address" type="text">
-  </label>
-  <label>
-    Your email:
-    <input id="hidden-email" name="email" type="email">
-  </label>
-  <label>
-    Number of stories:
-    <input id="hidden-number-of-stories" name="number-of-stories" type="text">
-  </label>
-  <label>
-    Type of exterior:
-    <input id="hidden-type-of-exterior" name="type-of-exterior" type="text">
-  </label>
-  <label>
-    Services:
-    <input id="hidden-services" name="services" type="text">
-  </label>
-  <!-- <label>
-    Message:
-    <input id="hidden-message" name="message" type="text">
-  </label> -->
-  <label>
-    Your message:
-    <!-- <textarea id="hidden-message" name="message"></textarea> -->
-    <input id="hidden-message" name="message" type="text">
-  </label>
-  <!-- your other form fields go here -->
+>  
+  <input id="hidden-name" name="name" type="text">
+  <input id="hidden-phone" name="phone" type="text">
+  <input id="hidden-address" name="address" type="text">
+  <input id="hidden-email" name="email" type="email">
+  <input id="hidden-number-of-stories" name="number-of-stories" type="text">
+  <input id="hidden-type-of-exterior" name="type-of-exterior" type="text">
+  <input id="hidden-services" name="services" type="text">
+  <input id="hidden-message" name="message" type="text">
   <button type="submit" (click)="form.submit()">Send</button>
 </form>
 
