@@ -62,8 +62,24 @@ export class ContactFormStepperComponent implements AfterViewInit, OnDestroy, On
   hiddenMessage: HTMLInputElement;
   hiddenSubmitButton: HTMLButtonElement;
 
-  // Reactive Form, Step 1
-  formGroupStep1: UntypedFormGroup;
+  // Reactive FormGroup, Step 1
+  formGroupStep1 = this._fb.group({
+    name:             ['', Validators.required],
+    phone:            ['', Validators.required],
+    address:          ['', Validators.required],
+    email:            '',
+    numberOfStories:  '',
+    typeOfExterior:   '',
+  });
+
+  //Reactive FormGroup, Step 2
+  formGroupStep2 = this._fb.group({
+    services: ['', servicesValidator],
+    message:  '',
+  });
+
+  // Reactive Form Getters, Step 1
+  // formGroupStep1: UntypedFormGroup;
   get name()            { return this.formGroupStep1.get('name'); }
   get email()           { return this.formGroupStep1.get('email'); }
   get phone()           { return this.formGroupStep1.get('phone'); }
@@ -71,8 +87,8 @@ export class ContactFormStepperComponent implements AfterViewInit, OnDestroy, On
   get numberOfStories() { return this.formGroupStep1.get('numberOfStories'); }
   get typeOfExterior()  { return this.formGroupStep1.get('typeOfExterior'); }
 
-  // Reactive Form, Step 2
-  formGroupStep2: UntypedFormGroup;
+  // Reactive Form Getters, Step 2
+  // formGroupStep2: UntypedFormGroup;
   get services()  { return this.formGroupStep2.get('services'); }
   get message()   { return this.formGroupStep2.get('message'); }
 
@@ -104,20 +120,6 @@ export class ContactFormStepperComponent implements AfterViewInit, OnDestroy, On
   }
 
   ngOnInit(): void {
-
-    this.formGroupStep1 = this._fb.group({
-      name:             ['', Validators.required],
-      phone:            ['', Validators.required],
-      address:          ['', Validators.required],
-      email:            '',
-      numberOfStories:  '',
-      typeOfExterior:   '',
-    });
-
-    this.formGroupStep2 = this._fb.group({
-      services: ['', servicesValidator],
-      message:  '',
-    });
   }
 
   onClickService(): void {

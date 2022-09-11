@@ -13,7 +13,13 @@
       <!-- Name -->
       <mat-form-field class="form-field-name">
         <mat-label>Name</mat-label>
-        <input formControlName="name" matInput type="text">
+        <!-- <input formControlName="name" matInput type="text"> -->
+        <input 
+          formControlName="name" 
+          matInput 
+          type="text" 
+          (keyup)="updateHiddenNameInputField()"
+        >
         <mat-error *ngIf="name.errors?.required">Please enter your name</mat-error>
       </mat-form-field>
 

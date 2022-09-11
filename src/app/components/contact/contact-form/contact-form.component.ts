@@ -28,7 +28,18 @@ export class ContactFormComponent implements OnDestroy, OnInit {
   servicesFormControlError: BehaviorSubject<ValidationErrors | null> = new BehaviorSubject(null);
   private _subscriptions: Subscription = new Subscription();
 
-  // Reactive Form
+  // Hidden Input Elements
+  hiddenName: HTMLInputElement;
+  // hiddenPhone: HTMLInputElement;
+  // hiddenAddress: HTMLInputElement;
+  // hiddenEmail: HTMLInputElement;
+  // hiddenNumberOfStories: HTMLInputElement;
+  // hiddenTypeOfExterior: HTMLInputElement;
+  // hiddenServices: HTMLInputElement;
+  // hiddenMessage: HTMLInputElement;
+  // hiddenSubmitButton: HTMLButtonElement;
+  
+  // Reactive FormGroup
   contactForm = this.fb.group({
     name:             ['', Validators.required],
     phone:            ['', Validators.required],
@@ -39,6 +50,8 @@ export class ContactFormComponent implements OnDestroy, OnInit {
     services:         ['', servicesValidator],
     message:          '',
   });
+
+  // Reactive Form Getters
   get name()            { return this.contactForm.get('name'); }
   get email()           { return this.contactForm.get('email'); }
   get phone()           { return this.contactForm.get('phone'); }
@@ -54,6 +67,22 @@ export class ContactFormComponent implements OnDestroy, OnInit {
     private sendDataService: SendDataService,
   ) { }
 
+  ngAfterViewInit(): void {
+    // setTimeout(_ => this.animationFadeIn = true);
+    // setTimeout(_ => this.animationSlideRight = true);
+    // if (!this.viewed) this.trackViewsService.hasBeenViewed.add('contact-form-stepper');
+
+    this.hiddenName = document.querySelector('#hidden-name');
+    // this.hiddenPhone = document.querySelector('#hidden-phone');
+    // this.hiddenAddress = document.querySelector('#hidden-address');
+    // this.hiddenEmail = document.querySelector('#hidden-email');
+    // this.hiddenNumberOfStories = document.querySelector('#hidden-number-of-stories');
+    // this.hiddenTypeOfExterior = document.querySelector('#hidden-type-of-exterior');
+    // this.hiddenServices = document.querySelector('#hidden-services');
+    // this.hiddenMessage = document.querySelector('#hidden-message');
+    // this.hiddenSubmitButton = document.querySelector('#hidden-submit-button');
+  }
+  
   ngOnDestroy(): void {
     this._subscriptions.unsubscribe();
   }
@@ -81,5 +110,9 @@ export class ContactFormComponent implements OnDestroy, OnInit {
           : null;
       }
     ));
+  }
+
+  updateHiddenNameInputField(): void {
+    this.hiddenName.setAttribute('value', this.name.value)
   }
 }
