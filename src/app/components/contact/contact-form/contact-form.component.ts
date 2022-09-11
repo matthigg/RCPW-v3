@@ -37,7 +37,7 @@ export class ContactFormComponent implements OnDestroy, OnInit {
   // hiddenTypeOfExterior: HTMLInputElement;
   // hiddenServices: HTMLInputElement;
   // hiddenMessage: HTMLInputElement;
-  // hiddenSubmitButton: HTMLButtonElement;
+  hiddenSubmitButton: HTMLButtonElement;
   
   // Reactive FormGroup
   contactForm = this.fb.group({
@@ -80,7 +80,7 @@ export class ContactFormComponent implements OnDestroy, OnInit {
     // this.hiddenTypeOfExterior = document.querySelector('#hidden-type-of-exterior');
     // this.hiddenServices = document.querySelector('#hidden-services');
     // this.hiddenMessage = document.querySelector('#hidden-message');
-    // this.hiddenSubmitButton = document.querySelector('#hidden-submit-button');
+    this.hiddenSubmitButton = document.querySelector('#hidden-submit-button');
   }
   
   ngOnDestroy(): void {
@@ -96,20 +96,24 @@ export class ContactFormComponent implements OnDestroy, OnInit {
     });
   }
 
+  // onSubmit(): void {
+  //   this._subscriptions.add(this.sendDataService.sendData(this.contactForm.value).subscribe(
+  //     response => {
+  //       !environment.production 
+  //         ? console.log('--- Contact Form API Response:', response) 
+  //         : null;
+  //       this.router.navigate(['thank-you']);
+  //     },
+  //     error => {
+  //       !environment.production 
+  //         ? console.log('--- Contact Form API Error:', error) 
+  //         : null;
+  //     }
+  //   ));
+  // }
+
   onSubmit(): void {
-    this._subscriptions.add(this.sendDataService.sendData(this.contactForm.value).subscribe(
-      response => {
-        !environment.production 
-          ? console.log('--- Contact Form API Response:', response) 
-          : null;
-        this.router.navigate(['thank-you']);
-      },
-      error => {
-        !environment.production 
-          ? console.log('--- Contact Form API Error:', error) 
-          : null;
-      }
-    ));
+    this.hiddenSubmitButton.click();
   }
 
   updateHiddenNameInputField(): void {
