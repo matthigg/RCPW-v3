@@ -128,6 +128,8 @@ export class ContactFormStepperComponent implements AfterViewInit, OnDestroy, On
 
   onSubmit(): void {
     this.hiddenSubmitButton.click();
+    this.formGroupStep1.reset();
+    this.formGroupStep2.reset();
   }
 
   updateHiddenNameInputField(): void {
